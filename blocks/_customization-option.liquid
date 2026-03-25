@@ -1,0 +1,79 @@
+<div class="customization-option product-property spacing-style"
+  style="{% render 'spacing-style', settings: block.settings %}"
+>
+  {% content_for 'blocks' %}
+</div>
+
+{% schema %}
+{
+  "name": "t:names.customization_option",
+  "blocks": [
+    {
+      "type": "_text-field"
+    },
+    {
+      "type": "_file-field"
+    }
+  ],
+  "settings": [
+    {
+      "type": "header",
+      "content": "t:content.padding"
+    },
+    {
+      "type": "range",
+      "id": "padding-block-start",
+      "label": "t:settings.top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding-block-end",
+      "label": "t:settings.bottom",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding-inline-start",
+      "label": "t:settings.left",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding-inline-end",
+      "label": "t:settings.right",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:names.customization_option",
+      "category": "t:categories.product",
+      "blocks": [
+        {
+          "type": "_text-field"
+        },
+        {
+          "type": "_file-field"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,48 @@
+<div class="product-quick-add__media0">
+  {%- content_for 'blocks' -%}
+</div>
+{% stylesheet %}
+  .product-quick-add__media {
+    display: grid;
+    grid-template-columns: 10rem 1fr;
+    gap: 2.4rem;
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "t:names.media",
+  "tag": null,
+  "blocks": [
+    {
+      "type": "text"
+    },
+    {
+      "type": "icon"
+    },
+    {
+      "type": "group"
+    },
+    {
+      "type": "spacer"
+    },
+    {
+      "type": "price"
+    },
+    {
+      "type": "review"
+    },
+    {
+      "type": "_divider"
+    }
+  ],
+  "settings": [
+  ],
+  "presets": [
+    {
+      "name": "t:names.media",
+      "category": "t:categories.product"
+    }
+  ]
+}
+{% endschema %}

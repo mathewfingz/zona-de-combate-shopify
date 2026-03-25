@@ -1,0 +1,251 @@
+{%- liquid
+  assign menu_tab = blocks | where: 'type', 'menu_tab'
+-%}
+
+{%- if menu_tab.size > 0 -%}
+  <div
+    class="header-multi-site{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %} color-{{ settings.color_scheme_top }}"
+  >
+    <div
+      class="flex overflow-x-a disable-srollbar"
+      data-menu-tab
+    >
+      {%- for block in blocks -%}
+        {% liquid
+          assign bl_stts = block.settings
+
+          assign text_color = bl_stts.text_color.rgb
+          assign text_bg = bl_stts.text_bg
+          assign text_color_active = bl_stts.text_color_active.rgb
+          assign text_bg_active = bl_stts.text_bg_active.rgb
+
+          assign text_style = '--color: ' | append: text_color | append: ';' | append: '--background-color: ' | append: text_bg | append: ';' | append: '--color-active: ' | append: text_color_active | append: ';' | append: '--background-color-active: ' | append: text_bg_active | append: ';'
+
+          assign logo_width = '16'
+          assign logo_width_mobile = '16'
+          assign logo_height = logo_width | divided_by: bl_stts.logo.aspect_ratio | ceil
+          assign logo_height_mobile = logo_width_mobile | divided_by: bl_stts.logo.aspect_ratio | ceil
+
+          assign logo_style = '--header-logo-image-width: ' | append: 'auto;' | append: '--header-logo-image-width-mobile: ' | append: 'auto; --header-logo-image-height: ' | append: logo_height | append: 'px; --header-logo-image-height-mobile: ' | append: logo_height_mobile | append: 'px;'
+        %}
+        {%- case block.type -%}
+          {%- when '@app' -%}
+            {% render block %}
+          {%- when 'menu_tab' -%}
+            <div
+              class="
+                shrink-0
+                {% if bl_stts.divider %} divider--right{% endif %}
+              "
+              style="{{ text_style }}"
+            >
+              {%- liquid
+                assign page_handle = page.handle
+                assign multi_site_handle = block.settings.link.handle
+                assign multi_site_url = block.settings.link.url
+                assign class = 'link link--multi-site'
+
+                if forloop.first
+                  assign class = class | append: ' link--multi-site--active'
+                endif
+
+                if multi_site_url != blank
+                  assign url = multi_site_url
+                else
+                  assign url = routes.root_url
+                endif
+              -%}
+              <a
+                {% if url == blank %}
+                  role="link" aria-disabled="true"
+                {% else %}
+                  href="{{ url }}"
+                {% endif %}
+                class="{{ class }}"
+                data-handle-page="{{ multi_site_handle }}"
+              >
+                {%- if bl_stts.logo != blank -%}
+                  {%- liquid
+                    assign logo_alt = settings.logo.alt | default: shop.name | escape
+                    assign image = bl_stts.logo
+                  -%}
+                  {% capture widths %}{{ section.settings.logo_width }}, {{ section.settings.logo_width | times: 1.5 | round }}, {{ section.settings.logo_width | times: 2 }}{% endcapture %}
+                  {{
+                    image
+                    | image_url: width: 600
+                    | image_tag:
+                      image: settings.logo,
+                      class: 'header__heading-logo motion-reduce',
+                      widths: widths,
+                      height: logo_height,
+                      width: section.settings.logo_width,
+                      text_fallback: text_fallback,
+                      alt: logo_alt,
+                      sizes: sizes,
+                      style: logo_style,
+                      fetch_priority: 'high'
+                  }}
+                {%- elsif bl_stts.logo_text != blank -%}
+                  {{ bl_stts.logo_text }}
+                {%- else -%}
+                  {{ shop.name }}
+                {%- endif -%}
+              </a>
+              {%- if multi_site_handle != blank -%}
+                {%- assign menu = linklists[multi_site_handle].links -%}
+                {% render 'header-menu-multi-site', blocks: blocks, menu: menu %}
+              {%- endif -%}
+            </div>
+        {%- endcase -%}
+      {%- endfor -%}
+    </div>
+  </div>
+
+  <script type="text/javascript">
+    window.page_active = '{{ page_handle }}';
+  </script>
+
+{%- endif -%}
+  {% comment %} <script>
+    function setCookie(name, value, days) {
+      let expires = '';
+      if (days) {
+        let date = new Date();
+        date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
+        expires = '; expires=' + date.toUTCString();
+      }
+      document.cookie = name + '=' + value + '; path=/' + expires;
+    }
+
+    function getCookie(name) {
+      let matches = document.cookie.match(
+        new RegExp('(?:^|; )' + name.replace(/([.$?*|{}()\[\]\\\/\+^])/g, '\\$1') + '=([^;]*)')
+      );
+      return matches ? decodeURIComponent(matches[1]) : null;
+    }
+
+    function menuTab() {
+      const menuTabs = document.querySelector('[data-menu-tab]');
+      if (!menuTabs) return;
+
+      document.addEventListener('click', (event) => {
+        const target = event.target.closest('[data-menu-tab] a');
+        if (!target) return;
+
+        const activePage = target.dataset.loadPage;
+        setCookie('page-url', activePage, 1);
+      });
+
+      const canonical = document.querySelector('[canonical-url]')?.getAttribute('canonical-url');
+      let handlePageUrl = getCookie('page-url');
+      let menuTabItem, logoTabItem, menuItem;
+
+      if (window.location.pathname.includes('/pages/') && window.page_active && window.page_active !== handlePageUrl) {
+        setCookie('page-url', window.page_active, 1);
+        handlePageUrl = window.page_active;
+      }
+      if (handlePageUrl) {
+        menuTabItem = document.querySelector(`[data-handle-page='${handlePageUrl}']`);
+        logoTabItem = document
+          .querySelector('.header__heading-link')
+          ?.setAttribute('data-logo-page', `${handlePageUrl}`);
+        menuItem = document
+          .querySelector(`[data-handle-page='${handlePageUrl}']~.header__inline-menu`)
+          ?.setAttribute('data-menu-page', `${handlePageUrl}`);
+      } else {
+        menuTabItem = document.querySelector('[data-handle-page].link--multi-site--active');
+        logoTabItem = document.querySelector('[data-logo-page].first');
+        menuItem = document.querySelector('[data-menu-page].link--multi-site--active');
+      }
+
+      const menuTab = menuTabItem?.closest('[data-menu-tab]');
+      if (menuTab) {
+        menuTab.querySelectorAll('[data-handle-page]').forEach((el) => el.classList.remove('link--multi-site--active'));
+        logoTabItem?.parentElement
+          ?.querySelectorAll('[data-logo-page]')
+          .forEach((el) => el.classList.remove('link--multi-site--active'));
+        menuItem?.parentElement
+          ?.querySelectorAll('[data-menu-page]')
+          .forEach((el) => el.classList.remove('link--multi-site--active'));
+      }
+
+      if (handlePageUrl) {
+        logoTabItem?.classList.add('link--multi-site--active');
+        menuTabItem?.classList.add('link--multi-site--active');
+        menuItem?.classList.add('link--multi-site--active');
+      } else {
+        document.querySelector('[data-handle-page]:nth-child(1)')?.classList.add('link--multi-site--active');
+        document.querySelector('[data-logo-page]:nth-child(1)')?.classList.add('link--multi-site--active');
+        document.querySelector('[data-menu-page]:nth-child(1)')?.classList.add('link--multi-site--active');
+      }
+    }
+    menuTab();
+
+    function appendTabMenuToMainMenu() {
+      const handle = getCookie('page-url') || window.page_active;
+      const mainMenu = document.querySelector('[data-main-menu]');
+      const tabMenu = document.querySelector(`[data-menu-page='${handle}']`);
+
+      if (!mainMenu) {
+        // Cannot find main menu element, nothing to do
+        return;
+      }
+
+      if (!handle || handle === 'undefined') {
+        const inlineMenu = mainMenu.querySelector('.list-menu--inline');
+        if (inlineMenu) {
+          inlineMenu.classList.remove('hidden');
+        }
+        return;
+      }
+
+      if (tabMenu) {
+        const template = tabMenu.querySelector('template');
+        if (template) {
+          const templateContent = template.content.cloneNode(true);
+          mainMenu.innerHTML = '';
+          mainMenu.appendChild(templateContent);
+        }
+      }
+    }
+    appendTabMenuToMainMenu();
+  </script> {% endcomment %}
+
+{%- stylesheet -%}
+  .header .link.link--multi-site {
+    position: relative;
+    color: rgb(var(--color));
+    background-color: var(--background-color);
+    padding: var(--padding-lg) var(--padding-xl);
+    transition: color var(--animation-speed) var(--animation-timing-hover),
+      background-color var(--animation-speed) var(--animation-timing-hover);
+    display: block;
+    height: 100%;
+    &.link--multi-site--active {
+      color: rgba(var(--color-active) / var(--opacity-100));
+      background-color: rgba(var(--background-color-active) / var(--opacity-100));
+    }
+
+    svg {
+      height: var(--size-16);
+      width: auto;
+      fill: currentColor;
+    }
+
+    &:hover {
+      color: rgba(var(--color-active) / var(--opacity-80));
+      background-color: rgba(var(--background-color-active) / var(--opacity-80));
+    }
+  }
+
+  .header-multi-site .divider--right:not(:last-child) .link--multi-site:not(.link--multi-site--active)::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    width: var(--size-1);
+    height: var(--size-30);
+    background-color: rgba(var(--color) / var(--opacity-30));
+  }
+{%- endstylesheet -%}

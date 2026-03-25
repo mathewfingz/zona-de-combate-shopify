@@ -1,0 +1,261 @@
+<side-drawer
+	class="drawer promotionPopup fixed top-0 left-0 z-9 w-screen h-full flex justify-center no-js-hidden"
+	element-s-popup
+	id="Promotion-popup-{{ section.id }}"
+	data-moved="false"
+	tabindex="-1"
+>
+	<div id="Drawer-Overlay-Promotion-{{ section.id }}" class="drawer__overlay fixed inset-0 cursor-pointer"></div>
+	<promotion-popup class="popup__inner promotion-popup w-full h-auto absolute-c-c global-settings-popup color-{{ section.settings.color_scheme }} overflow-y-a cus-scrollbar"
+		role="dialog"
+		aria-modal="true"
+		aria-label="{{ 'accessibility.promotion-popup' | t }}"
+		style="--modal-max-width: 93.5rem; --modal-max-height: min(100%, 75vh); --p: 0;"
+		data-expire="{{ section.settings.popup_expire }}"
+		data-delay="{{ section.settings.popup_delay | times: 1000 }}"
+	>
+		{% content_for 'blocks' %}
+
+		<button
+			type="button"
+			class="popup__close"
+			onclick="this.closest('side-drawer').close()"
+			aria-label="{{ 'accessibility.close' | t }}"
+		>
+			{{- 'icon-close.svg' | inline_asset_content -}}
+		</button>
+	</promotion-popup>
+
+	<div class="button-checked hidden">
+		<input id="dismiss" type="checkbox" name="dismiss">
+		<label for="dismiss" class="form-label--checkbox" role="text">No, thanks</label>
+	</div>
+</side-drawer>
+
+{% stylesheet %}
+	.promotion-popup__close.close-effect .line {
+		background: var(--color-foreground);
+	}
+
+	.promotion-popup__info .promotion--button {
+		padding-top: 1.6rem;
+		padding-bottom: 1.4rem;
+		font-size: 1.6rem;
+		min-height: calc(5.2rem + var(--style-border-width-primary) * 2)
+	}
+
+	.promotion-popup__info .button--submit {
+		max-width: calc(100% - var(--style-border-width-primary) * 2);
+	}
+
+	.promotion-popup__info .promotion--button svg {
+		width: 1.8rem;
+		height: 1.8rem;
+	}
+
+	.promotion--button.button--primary + .promotion--social {
+		margin-top: 2rem;
+	}
+
+	.promotion-popup__info .field__input::-webkit-input-placeholder{
+		text-transform: var(--heading-text-transform);
+	}
+
+	.promotion-popup__info .field__input::-moz-placeholder{
+		text-transform: var(--heading-text-transform);
+	}
+
+	.promotion-popup__info .field__input::-ms-input-placeholder{
+		text-transform: var(--heading-text-transform);
+	}
+
+	@media screen and (min-width: 1025px) {
+		.promotion-popup__info .button--tertiary {
+			font-size: 2rem;
+		}
+	}
+{% endstylesheet %}
+
+<script defer="defer">
+	class PromotionPopup extends HTMLElement {
+		constructor() {
+			super();
+			this.drawer = this.closest('.drawer');
+			this.dismissTodayCookie = '_halo_promotion_popup_dismiss_today';
+			this.expiresDate = this.getAttribute('data-expire');
+			this.timeToShow = parseInt(this.getAttribute('data-delay')) || 0;
+			this._storage = this.getBestStorage();
+
+			this.querySelector('.popup__close')?.addEventListener('click', this.dismissUntilTomorrow.bind(this));
+			this.drawer.querySelector('[id^="Drawer-Overlay-"]')?.addEventListener('click', this.dismissUntilTomorrow.bind(this));
+
+			if (Shopify.designMode) {
+				document.addEventListener('shopify:section:select', (e) => {
+					if (e.target.matches('.section-promotion-popup')) this.setOpenPopup(0);
+				});
+
+				document.addEventListener('shopify:section:deselect', (e) => {
+					if (e.target.matches('.section-promotion-popup')) this.setClosePopup();
+				});
+			}
+		}
+
+		connectedCallback() {
+			// Run load after element is attached to DOM for reliability across browsers/private modes
+			try { this.load(); } catch (_) { this.setOpenPopup(this.timeToShow); }
+		}
+
+		load() {
+			// If user dismissed for today, do not open
+			if (this.getStore(this.dismissTodayCookie)) return;
+
+			if (this.querySelector('.email-signup__message')) this.drawer.classList.add('active');
+			if (!Shopify.designMode) this.setOpenPopup(this.timeToShow);
+		}
+
+		setOpenPopup(timeToShow) {
+			setTimeout(() => {
+				this.drawer.classList.add('active');
+				document.body.classList.add('overflow-hidden');
+				document.documentElement.setAttribute('scroll-lock', '');
+
+				this.drawer.addEventListener('transitionend', () => {
+					const containerToTrapFocusOn = this.drawer.querySelector('.popup__inner');
+					const focusElement = this.drawer.querySelector('.field__input');
+					trapFocus(containerToTrapFocusOn, focusElement);
+				}, { once: true });
+			}, timeToShow);
+		}
+
+		setClosePopup() {
+			this.setStoreDays(this.dismissTodayCookie, 'closed', this.expiresDate);
+			this.drawer.classList.remove('active');
+			document.body.classList.remove('overflow-hidden');
+			document.documentElement.removeAttribute('scroll-lock');
+			removeTrapFocus(this.activeElement);
+		}
+
+		// Close without setting long-expiry cookie
+		tempClose() {
+			this.drawer.classList.remove('active');
+			document.body.classList.remove('overflow-hidden');
+			document.documentElement.removeAttribute('scroll-lock');
+			removeTrapFocus(this.activeElement);
+		}
+
+		// Set dismissal to expire at next local midnight
+		dismissUntilTomorrow() {
+			const now = new Date();
+			const tomorrowMidnight = new Date(now.getFullYear(), now.getMonth(), now.getDate() + 1, 0, 0, 0, 0);
+			this.setStoreUntil(this.dismissTodayCookie, '1', tomorrowMidnight);
+			this.tempClose();
+		}
+
+		setActiveElement(element) {
+			this.activeElement = element;
+		}
+
+		// LocalStorage helpers with expiry
+		setStoreDays(name, value, days) {
+			var d = new Date();
+			d.setTime(d.getTime() + 24 * 60 * 60 * 1000 * days);
+			this.setStoreUntil(name, value, d);
+		}
+
+		setStoreUntil(name, value, date) {
+			try {
+				if (!this._storage) return;
+				var payload = { v: value, exp: date.getTime() };
+				this._storage.setItem(name, JSON.stringify(payload));
+			} catch (_) {}
+		}
+
+		getStore(name) {
+			try {
+				if (!this._storage) return null;
+				var raw = this._storage.getItem(name);
+				if (!raw) return null;
+				var payload = JSON.parse(raw);
+				if (!payload || typeof payload.exp !== 'number') return null;
+				if (Date.now() > payload.exp) {
+					this._storage.removeItem(name);
+					return null;
+				}
+				return payload.v;
+			} catch (_) { return null; }
+		}
+
+		getBestStorage() {
+			// Prefer localStorage, fallback to sessionStorage. Return null if none work
+			try {
+				var k = '__pp_test__';
+				window.localStorage.setItem(k, '1');
+				window.localStorage.removeItem(k);
+				return window.localStorage;
+			} catch (_) {}
+			try {
+				var k2 = '__pp_test__';
+				window.sessionStorage.setItem(k2, '1');
+				window.sessionStorage.removeItem(k2);
+				return window.sessionStorage;
+			} catch (_) {}
+			return null;
+		}
+	}
+	if (!customElements.get('promotion-popup')) customElements.define('promotion-popup', PromotionPopup);
+</script>
+
+{% schema %}
+{
+	"name": "t:names.promotion_popup",
+	"tag": "section",
+	"class": "section-promotion-popup",
+	"limit": 1,
+	"enabled_on": {
+		"groups": ["custom.popup"]
+	},
+	"blocks": [
+		{
+			"type": "group"
+		}
+	],
+	"settings": [
+		{
+			"type": "range",
+			"id": "popup_expire",
+			"max": 30,
+			"min": 1,
+			"step": 1,
+			"unit": "day",
+			"label": "t:settings.show_again_after",
+			"default": 1
+		},
+		{
+			"type": "range",
+			"id": "popup_delay",
+			"max": 60,
+			"min": 1,
+			"step": 1,
+			"unit": "s",
+			"label": "t:settings.delay_time",
+			"default": 5
+		},
+		{
+			"type": "header",
+			"content": "t:content.appearance"
+		},
+		{
+			"type": "color_scheme",
+			"id": "color_scheme",
+			"label": "t:settings.color_scheme",
+			"default": "scheme-1"
+		},
+		{
+			"type": "image_picker",
+			"id": "image",
+			"label": "t:settings.image",
+			"info": "t:info.promotion_popup_image_info"
+		}
+	]
+}
+{% endschema %}

@@ -1,0 +1,78 @@
+{%- if show_country or show_language -%}
+  {%- if country_style == true -%}
+    <link rel="stylesheet" href="{{ 'icon-flag.css' | asset_url }}" media="print" onload="this.media='all'">
+  {%- endif -%}
+
+  {%- assign hide_mobile = 'small-hide medium-hid' -%}
+
+  {% if localization_type == 'icon' %}
+    {%- capture icon_globe -%}
+      <svg
+        class="icon-globe icon"
+        aria-hidden="true"
+        focusable="false"
+        fill="none"
+        viewBox="0 0 50 50"
+      >
+        {%- render 'icon', icon: 'globe' -%}
+      </svg>
+    {%- endcapture -%}
+    <div class="header__icon--localization small-hide medium-hide">
+      <div class="header-localization country-language-localization">
+        {%- if show_language and localization.available_languages.size > 1 -%}
+          <div>
+            <h2 class="visually-hidden" id="HeaderLanguageLabel">{{ 'content.language_label' | t }}</h2>
+            {%- render 'language-country-localization',
+              localPosition: 'HeaderLanguage',
+              country_style: country_style,
+              show_language: show_language,
+              show_country: show_country,
+              icon_globe: icon_globe,
+              section_id: section_id
+            -%}
+          </div>
+        {%- endif -%}
+      </div>
+    </div>
+  {% else %}
+    <div class="header-localization desktop-localization-wrapper max-md:hidden">
+      {%- if show_language and localization.available_languages.size > 1 -%}
+        <localization-form class="{{ hide_mobile }}" data-prevent-hide activate-event="hover">
+          {%- form 'localization', id: 'HeaderLanguageForm', class: 'localization-form' -%}
+            <div>
+              <h2 class="visually-hidden" id="HeaderLanguageLabel">{{ 'content.language_label' | t }}</h2>
+              {%- render 'language-localization', localPosition: 'HeaderLanguage', country_style: country_style -%}
+            </div>
+          {%- endform -%}
+        </localization-form>
+      {%- endif -%}
+
+      {%- if show_language and show_country -%}
+        <span class="separator {{ hide_mobile }}">|</span>
+      {%- endif -%}
+
+      {%- if show_country and localization.available_countries.size > 1 -%}
+        <localization-form class="{{ hide_mobile }}" data-prevent-hide activate-event="hover">
+          {%- form 'localization', id: 'HeaderCountryForm', class: 'localization-form' -%}
+            <div>
+              <h2 class="visually-hidden" id="HeaderCountryLabel">{{ 'content.country_label' | t }}</h2>
+              {%- render 'country-localization', localPosition: 'HeaderCountry', country_style: country_style -%}
+            </div>
+          {%- endform -%}
+        </localization-form>
+      {% endif %}
+    </div>
+  {% endif %}
+{%- endif -%}
+
+{%- stylesheet -%}
+  .header-localization .disclosure__list-wrapper {
+    bottom: initial;
+    top: 100%;
+  }
+
+  .header__icon--localization .desktop-localization-wrapper {
+    flex-wrap: nowrap;
+    padding-inline: var(--padding-sm);
+  }
+{%- endstylesheet -%}

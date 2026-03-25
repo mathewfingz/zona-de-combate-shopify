@@ -1,0 +1,22 @@
+<div class="cart__ctas">
+  <button
+    type="submit"
+    id="checkout"
+    class="cart__checkout-button button"
+    name="checkout"
+    {% if cart == empty %}
+      disabled
+    {% endif %}
+    form="cart"
+  >
+    {{ 'content.checkout' | t }}
+  </button>
+</div>
+
+{%- if additional_checkout_buttons -%}
+  <div class="cart__dynamic-checkout-buttons additional-checkout-buttons">
+    {{ content_for_additional_checkout_buttons }}
+  </div>
+{%- endif -%}
+
+<div id="cart-errors"></div>
