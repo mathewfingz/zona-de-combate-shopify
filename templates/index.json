@@ -940,13 +940,49 @@
         "subtitle": "Todo lo que necesitas para transformar tu cuerpo"
       },
       "blocks": {
-        "ft_1": { "type": "feature", "settings": { "title": "Plan Personalizado", "description": "Rutinas adaptadas a tu nivel y objetivos. Desde principiante hasta avanzado." } },
-        "ft_2": { "type": "feature", "settings": { "title": "Guía de Alimentación", "description": "Plan nutricional completo con recetas fáciles y lista de mercado semanal." } },
-        "ft_3": { "type": "feature", "settings": { "title": "Acompañamiento Diario", "description": "Grupo de Telegram con entrenadores reales que responden tus dudas todos los días." } },
-        "ft_4": { "type": "feature", "settings": { "title": "Clases Presenciales", "description": "Sesiones presenciales en Zona de Combate con entrenadores profesionales." } },
-        "ft_5": { "type": "feature", "settings": { "title": "Acceso a la App", "description": "Todos los entrenamientos y seguimiento de progreso desde tu celular." } }
+        "ft_1": {
+          "type": "feature",
+          "settings": {
+            "title": "Plan Personalizado",
+            "description": "Rutinas adaptadas a tu nivel y objetivos. Desde principiante hasta avanzado."
+          }
+        },
+        "ft_2": {
+          "type": "feature",
+          "settings": {
+            "title": "Guía de Alimentación",
+            "description": "Plan nutricional completo con recetas fáciles y lista de mercado semanal."
+          }
+        },
+        "ft_3": {
+          "type": "feature",
+          "settings": {
+            "title": "Acompañamiento Diario",
+            "description": "Grupo de Telegram con entrenadores reales que responden tus dudas todos los días."
+          }
+        },
+        "ft_4": {
+          "type": "feature",
+          "settings": {
+            "title": "Clases Presenciales",
+            "description": "Sesiones presenciales en Zona de Combate con entrenadores profesionales."
+          }
+        },
+        "ft_5": {
+          "type": "feature",
+          "settings": {
+            "title": "Acceso a la App",
+            "description": "Todos los entrenamientos y seguimiento de progreso desde tu celular."
+          }
+        }
       },
-      "block_order": ["ft_1", "ft_2", "ft_3", "ft_4", "ft_5"]
+      "block_order": [
+        "ft_1",
+        "ft_2",
+        "ft_3",
+        "ft_4",
+        "ft_5"
+      ]
     },
     "porque_section": {
       "type": "porque-plan",
@@ -955,12 +991,41 @@
         "subtitle": "Lo que nos hace diferentes"
       },
       "blocks": {
-        "pq_1": { "type": "reason", "settings": { "title": "No es un PDF genérico", "description": "Tu plan se adapta a tu nivel, objetivos y estilo de vida. Nada de copiar y pegar." } },
-        "pq_2": { "type": "reason", "settings": { "title": "Entrenadores reales", "description": "Detrás de tu plan hay peleadores profesionales de MMA, Boxeo, Muay Thai y BJJ." } },
-        "pq_3": { "type": "reason", "settings": { "title": "Comunidad que te empuja", "description": "No estás solo. El grupo de Telegram te mantiene motivado y rindiendo cuentas." } },
-        "pq_4": { "type": "reason", "settings": { "title": "Resultados comprobados", "description": "Más de 200 personas ya transformaron su cuerpo con el método Zona de Combate." } }
+        "pq_1": {
+          "type": "reason",
+          "settings": {
+            "title": "No es un PDF genérico",
+            "description": "Tu plan se adapta a tu nivel, objetivos y estilo de vida. Nada de copiar y pegar."
+          }
+        },
+        "pq_2": {
+          "type": "reason",
+          "settings": {
+            "title": "Entrenadores reales",
+            "description": "Detrás de tu plan hay peleadores profesionales de MMA, Boxeo, Muay Thai y BJJ."
+          }
+        },
+        "pq_3": {
+          "type": "reason",
+          "settings": {
+            "title": "Comunidad que te empuja",
+            "description": "No estás solo. El grupo de Telegram te mantiene motivado y rindiendo cuentas."
+          }
+        },
+        "pq_4": {
+          "type": "reason",
+          "settings": {
+            "title": "Resultados comprobados",
+            "description": "Más de 200 personas ya transformaron su cuerpo con el método Zona de Combate."
+          }
+        }
       },
-      "block_order": ["pq_1", "pq_2", "pq_3", "pq_4"]
+      "block_order": [
+        "pq_1",
+        "pq_2",
+        "pq_3",
+        "pq_4"
+      ]
     },
     "pricing_section": {
       "type": "pricing-faqs",
@@ -985,14 +1050,57 @@
         "faqs_subheading": "Resolvemos las preguntas más comunes"
       },
       "blocks": {
-        "faq_1": { "type": "faq", "settings": { "question": "¿Qué incluye exactamente el Plan ZDC?", "answer": "<p>El plan incluye: rutina de entrenamiento personalizada, guía de alimentación con recetas y lista de mercado, clases presenciales en Zona de Combate, acceso al grupo de Telegram con coaches y acceso completo a la app de seguimiento.</p>" } },
-        "faq_2": { "type": "faq", "settings": { "question": "¿Necesito experiencia previa en deportes de combate?", "answer": "<p>No, para nada. El plan se adapta a todos los niveles. Desde principiantes que nunca han entrenado hasta personas con experiencia que quieren subir de nivel. Tu rutina será 100% personalizada.</p>" } },
-        "faq_3": { "type": "faq", "settings": { "question": "¿Dónde son las clases presenciales?", "answer": "<p>Las clases presenciales se realizan en nuestra sede de Zona de Combate. Al inscribirte recibirás la dirección exacta, horarios disponibles y podrás agendar tus sesiones.</p>" } },
-        "faq_4": { "type": "faq", "settings": { "question": "¿Cómo funciona el grupo de Telegram?", "answer": "<p>Al comprar tu plan, recibirás un enlace para unirte al grupo exclusivo de Telegram. Ahí encontrarás a los entrenadores disponibles para resolver dudas, motivación diaria, tips de entrenamiento y una comunidad con los mismos objetivos.</p>" } },
-        "faq_5": { "type": "faq", "settings": { "question": "¿Puedo hacer el plan si no vivo en la ciudad?", "answer": "<p>Sí, el plan de entrenamiento y la guía alimentaria funcionan desde cualquier lugar. Solo las clases presenciales requieren asistir a nuestra sede. Si estás fuera de la ciudad, esas clases se reemplazan por sesiones virtuales en vivo.</p>" } },
-        "faq_6": { "type": "faq", "settings": { "question": "¿Cuál es la diferencia entre el Plan Base y el Completo?", "answer": "<p>El Plan Base ($120.000) incluye 4 clases presenciales al mes y todos los beneficios principales. El Plan Completo ($150.000) incluye 8 clases al mes y seguimiento personalizado con tu entrenador.</p>" } }
+        "faq_1": {
+          "type": "faq",
+          "settings": {
+            "question": "¿Qué incluye exactamente el Plan ZDC?",
+            "answer": "<p>El plan incluye: rutina de entrenamiento personalizada, guía de alimentación con recetas y lista de mercado, clases presenciales en Zona de Combate, acceso al grupo de Telegram con coaches y acceso completo a la app de seguimiento.</p>"
+          }
+        },
+        "faq_2": {
+          "type": "faq",
+          "settings": {
+            "question": "¿Necesito experiencia previa en deportes de combate?",
+            "answer": "<p>No, para nada. El plan se adapta a todos los niveles. Desde principiantes que nunca han entrenado hasta personas con experiencia que quieren subir de nivel. Tu rutina será 100% personalizada.</p>"
+          }
+        },
+        "faq_3": {
+          "type": "faq",
+          "settings": {
+            "question": "¿Dónde son las clases presenciales?",
+            "answer": "<p>Las clases presenciales se realizan en nuestra sede de Zona de Combate. Al inscribirte recibirás la dirección exacta, horarios disponibles y podrás agendar tus sesiones.</p>"
+          }
+        },
+        "faq_4": {
+          "type": "faq",
+          "settings": {
+            "question": "¿Cómo funciona el grupo de Telegram?",
+            "answer": "<p>Al comprar tu plan, recibirás un enlace para unirte al grupo exclusivo de Telegram. Ahí encontrarás a los entrenadores disponibles para resolver dudas, motivación diaria, tips de entrenamiento y una comunidad con los mismos objetivos.</p>"
+          }
+        },
+        "faq_5": {
+          "type": "faq",
+          "settings": {
+            "question": "¿Puedo hacer el plan si no vivo en la ciudad?",
+            "answer": "<p>Sí, el plan de entrenamiento y la guía alimentaria funcionan desde cualquier lugar. Solo las clases presenciales requieren asistir a nuestra sede. Si estás fuera de la ciudad, esas clases se reemplazan por sesiones virtuales en vivo.</p>"
+          }
+        },
+        "faq_6": {
+          "type": "faq",
+          "settings": {
+            "question": "¿Cuál es la diferencia entre el Plan Base y el Completo?",
+            "answer": "<p>El Plan Base ($120.000) incluye 4 clases presenciales al mes y todos los beneficios principales. El Plan Completo ($150.000) incluye 8 clases al mes y seguimiento personalizado con tu entrenador.</p>"
+          }
+        }
       },
-      "block_order": ["faq_1", "faq_2", "faq_3", "faq_4", "faq_5", "faq_6"]
+      "block_order": [
+        "faq_1",
+        "faq_2",
+        "faq_3",
+        "faq_4",
+        "faq_5",
+        "faq_6"
+      ]
     },
     "instructors_section": {
       "type": "instructors",
@@ -1047,7 +1155,13 @@
           }
         }
       },
-      "block_order": ["instructor_jorge", "instructor_ivan", "instructor_tomas", "instructor_jonathan", "instructor_salomon"]
+      "block_order": [
+        "instructor_jorge",
+        "instructor_ivan",
+        "instructor_tomas",
+        "instructor_jonathan",
+        "instructor_salomon"
+      ]
     },
     "gallery_section": {
       "type": "media-gallery",
@@ -1445,821 +1559,6 @@
         "gradient_direction": "to top",
         "padding-block-start": 0,
         "padding-block-end": 40
-      }
-    },
-    "faqs_section": {
-      "type": "faqs",
-      "blocks": {
-        "faqs_list_main": {
-          "type": "_faqs-list",
-          "settings": {
-            "horizontal_alignment": "flex-start",
-            "gap": 0,
-            "padding-block-start": 0,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
-          },
-          "blocks": {
-            "faq_1": {
-              "type": "_accordion-filter",
-              "settings": {
-                "heading_filter": "<h5>¿Que incluye exactamente el Plan ZDC?</h5>",
-                "highlight_text": false,
-                "highlight_text_content": "",
-                "highlight_text_type": "text",
-                "highlight_text_color": "#000000",
-                "highlight_underline_color": "#000000",
-                "spacing_text": false,
-                "spacing_text_content": "",
-                "spacing_text_left": 0,
-                "spacing_text_right": 0,
-                "stroke_text": false,
-                "stroke_text_content": "",
-                "type_preset": "rte",
-                "font": "var(--font-body--family)",
-                "font_size": "1.6rem",
-                "line_height": "normal",
-                "letter_spacing": "normal",
-                "case": "none"
-              },
-              "blocks": {
-                "faq_1_row": {
-                  "type": "_accordion-row",
-                  "settings": {
-                    "heading": "¿Que incluye exactamente el Plan ZDC?",
-                    "open_by_default": false,
-                    "inherit_color_scheme": true,
-                    "scheme_background": "#070E23",
-                    "scheme_background_gradient": "",
-                    "scheme_foreground_heading": "#ffffff",
-                    "scheme_foreground": "#ffffff",
-                    "scheme_primary": "#E30517",
-                    "scheme_primary_hover": "#E30517",
-                    "scheme_border": "#e6e6e6",
-                    "scheme_shadow": "#000000",
-                    "margin-block-start-row": 0,
-                    "margin-block-start-mobile-row": 0,
-                    "margin-block-end-row": 0,
-                    "margin-block-end-mobile-row": 0,
-                    "margin-inline-start-row": 0,
-                    "margin-inline-start-mobile-row": 0,
-                    "margin-inline-end-row": 0,
-                    "margin-inline-end-mobile-row": 0,
-                    "padding-block-start": 16,
-                    "padding-block-end": 16,
-                    "padding-inline-start": 20,
-                    "padding-inline-end": 20
-                  },
-                  "blocks": {
-                    "faq_1_text": {
-                      "type": "text",
-                      "name": "t:names.text",
-                      "settings": {
-                        "text": "<p>El plan incluye: rutina de entrenamiento personalizada de 60 dias, guia de alimentacion con recetas y lista de mercado, 4 clases presenciales de boxeo en Zona de Combate, acceso al grupo de Telegram con coaches y acceso completo a la app de seguimiento.</p>",
-                        "typing_text": false,
-                        "primary_text": "",
-                        "secondary_text": "",
-                        "third_text": "",
-                        "highlight_text": false,
-                        "highlight_text_content": "",
-                        "highlight_text_type": "text",
-                        "underline_height": 18,
-                        "underline_offset": -20,
-                        "highlight_text_color": "#000000",
-                        "highlight_underline_color": "#000000",
-                        "spacing_text": false,
-                        "spacing_text_content": "",
-                        "spacing_text_left": 0,
-                        "spacing_text_right": 0,
-                        "stroke_text": false,
-                        "stroke_text_content": "",
-                        "width": "100%",
-                        "unit": "percent",
-                        "custom_width": 100,
-                        "custom_width_pixel": 500,
-                        "inherit_text_alignment": true,
-                        "justify_alignment": false,
-                        "alignment": "left",
-                        "width_tablet": "100%",
-                        "unit_tablet": "percent",
-                        "custom_width_tablet": 100,
-                        "custom_width_tablet_pixel": 100,
-                        "inherit_text_alignment_tablet": true,
-                        "justify_alignment_tablet": false,
-                        "alignment_tablet": "left",
-                        "width_mobile": "100%",
-                        "unit_mobile": "percent",
-                        "custom_width_mobile": 100,
-                        "custom_width_mobile_pixel": 100,
-                        "inherit_text_alignment_mobile": true,
-                        "justify_alignment_mobile": false,
-                        "alignment_mobile": "left",
-                        "type_preset": "paragraph",
-                        "font": "var(--font-body--family)",
-                        "font_size": "1.4rem",
-                        "line_height": "normal",
-                        "letter_spacing": "normal",
-                        "case": "none",
-                        "wrap": "pretty",
-                        "color": "var(--color-foreground)",
-                        "background": false,
-                        "background_color": "#00000026",
-                        "enable_border": false,
-                        "enable_border_bottom": false,
-                        "border": "none",
-                        "border_width": 0,
-                        "border_width_type": "100%",
-                        "border_custom_width": 100,
-                        "border_radius": 0,
-                        "text_effect": "none",
-                        "animation_repeat": false,
-                        "padding-block-start": 0,
-                        "padding-block-end": 0,
-                        "padding-inline-start": 0,
-                        "padding-inline-end": 0
-                      },
-                      "blocks": {}
-                    }
-                  },
-                  "block_order": ["faq_1_text"]
-                }
-              },
-              "block_order": ["faq_1_row"]
-            },
-            "faq_2": {
-              "type": "_accordion-filter",
-              "settings": {
-                "heading_filter": "<h5>¿Necesito experiencia previa en deportes de combate?</h5>",
-                "highlight_text": false,
-                "highlight_text_content": "",
-                "highlight_text_type": "text",
-                "highlight_text_color": "#000000",
-                "highlight_underline_color": "#000000",
-                "spacing_text": false,
-                "spacing_text_content": "",
-                "spacing_text_left": 0,
-                "spacing_text_right": 0,
-                "stroke_text": false,
-                "stroke_text_content": "",
-                "type_preset": "rte",
-                "font": "var(--font-body--family)",
-                "font_size": "1.6rem",
-                "line_height": "normal",
-                "letter_spacing": "normal",
-                "case": "none"
-              },
-              "blocks": {
-                "faq_2_row": {
-                  "type": "_accordion-row",
-                  "settings": {
-                    "heading": "¿Necesito experiencia previa en deportes de combate?",
-                    "open_by_default": false,
-                    "inherit_color_scheme": true,
-                    "scheme_background": "#070E23",
-                    "scheme_background_gradient": "",
-                    "scheme_foreground_heading": "#ffffff",
-                    "scheme_foreground": "#ffffff",
-                    "scheme_primary": "#E30517",
-                    "scheme_primary_hover": "#E30517",
-                    "scheme_border": "#e6e6e6",
-                    "scheme_shadow": "#000000",
-                    "margin-block-start-row": 0,
-                    "margin-block-start-mobile-row": 0,
-                    "margin-block-end-row": 0,
-                    "margin-block-end-mobile-row": 0,
-                    "margin-inline-start-row": 0,
-                    "margin-inline-start-mobile-row": 0,
-                    "margin-inline-end-row": 0,
-                    "margin-inline-end-mobile-row": 0,
-                    "padding-block-start": 16,
-                    "padding-block-end": 16,
-                    "padding-inline-start": 20,
-                    "padding-inline-end": 20
-                  },
-                  "blocks": {
-                    "faq_2_text": {
-                      "type": "text",
-                      "name": "t:names.text",
-                      "settings": {
-                        "text": "<p>No, para nada. El plan se adapta a todos los niveles. Desde principiantes que nunca han entrenado hasta personas con experiencia que quieren subir de nivel. Tu rutina sera 100% personalizada.</p>",
-                        "typing_text": false,
-                        "primary_text": "",
-                        "secondary_text": "",
-                        "third_text": "",
-                        "highlight_text": false,
-                        "highlight_text_content": "",
-                        "highlight_text_type": "text",
-                        "underline_height": 18,
-                        "underline_offset": -20,
-                        "highlight_text_color": "#000000",
-                        "highlight_underline_color": "#000000",
-                        "spacing_text": false,
-                        "spacing_text_content": "",
-                        "spacing_text_left": 0,
-                        "spacing_text_right": 0,
-                        "stroke_text": false,
-                        "stroke_text_content": "",
-                        "width": "100%",
-                        "unit": "percent",
-                        "custom_width": 100,
-                        "custom_width_pixel": 500,
-                        "inherit_text_alignment": true,
-                        "justify_alignment": false,
-                        "alignment": "left",
-                        "width_tablet": "100%",
-                        "unit_tablet": "percent",
-                        "custom_width_tablet": 100,
-                        "custom_width_tablet_pixel": 100,
-                        "inherit_text_alignment_tablet": true,
-                        "justify_alignment_tablet": false,
-                        "alignment_tablet": "left",
-                        "width_mobile": "100%",
-                        "unit_mobile": "percent",
-                        "custom_width_mobile": 100,
-                        "custom_width_mobile_pixel": 100,
-                        "inherit_text_alignment_mobile": true,
-                        "justify_alignment_mobile": false,
-                        "alignment_mobile": "left",
-                        "type_preset": "paragraph",
-                        "font": "var(--font-body--family)",
-                        "font_size": "1.4rem",
-                        "line_height": "normal",
-                        "letter_spacing": "normal",
-                        "case": "none",
-                        "wrap": "pretty",
-                        "color": "var(--color-foreground)",
-                        "background": false,
-                        "background_color": "#00000026",
-                        "enable_border": false,
-                        "enable_border_bottom": false,
-                        "border": "none",
-                        "border_width": 0,
-                        "border_width_type": "100%",
-                        "border_custom_width": 100,
-                        "border_radius": 0,
-                        "text_effect": "none",
-                        "animation_repeat": false,
-                        "padding-block-start": 0,
-                        "padding-block-end": 0,
-                        "padding-inline-start": 0,
-                        "padding-inline-end": 0
-                      },
-                      "blocks": {}
-                    }
-                  },
-                  "block_order": ["faq_2_text"]
-                }
-              },
-              "block_order": ["faq_2_row"]
-            },
-            "faq_3": {
-              "type": "_accordion-filter",
-              "settings": {
-                "heading_filter": "<h5>¿Donde son las clases de boxeo en vivo?</h5>",
-                "highlight_text": false,
-                "highlight_text_content": "",
-                "highlight_text_type": "text",
-                "highlight_text_color": "#000000",
-                "highlight_underline_color": "#000000",
-                "spacing_text": false,
-                "spacing_text_content": "",
-                "spacing_text_left": 0,
-                "spacing_text_right": 0,
-                "stroke_text": false,
-                "stroke_text_content": "",
-                "type_preset": "rte",
-                "font": "var(--font-body--family)",
-                "font_size": "1.6rem",
-                "line_height": "normal",
-                "letter_spacing": "normal",
-                "case": "none"
-              },
-              "blocks": {
-                "faq_3_row": {
-                  "type": "_accordion-row",
-                  "settings": {
-                    "heading": "¿Donde son las clases de boxeo en vivo?",
-                    "open_by_default": false,
-                    "inherit_color_scheme": true,
-                    "scheme_background": "#070E23",
-                    "scheme_background_gradient": "",
-                    "scheme_foreground_heading": "#ffffff",
-                    "scheme_foreground": "#ffffff",
-                    "scheme_primary": "#E30517",
-                    "scheme_primary_hover": "#E30517",
-                    "scheme_border": "#e6e6e6",
-                    "scheme_shadow": "#000000",
-                    "margin-block-start-row": 0,
-                    "margin-block-start-mobile-row": 0,
-                    "margin-block-end-row": 0,
-                    "margin-block-end-mobile-row": 0,
-                    "margin-inline-start-row": 0,
-                    "margin-inline-start-mobile-row": 0,
-                    "margin-inline-end-row": 0,
-                    "margin-inline-end-mobile-row": 0,
-                    "padding-block-start": 16,
-                    "padding-block-end": 16,
-                    "padding-inline-start": 20,
-                    "padding-inline-end": 20
-                  },
-                  "blocks": {
-                    "faq_3_text": {
-                      "type": "text",
-                      "name": "t:names.text",
-                      "settings": {
-                        "text": "<p>Las 4 clases presenciales se realizan en nuestra sede de Zona de Combate. Al inscribirte recibiras la direccion exacta, horarios disponibles y podras agendar tus sesiones.</p>",
-                        "typing_text": false,
-                        "primary_text": "",
-                        "secondary_text": "",
-                        "third_text": "",
-                        "highlight_text": false,
-                        "highlight_text_content": "",
-                        "highlight_text_type": "text",
-                        "underline_height": 18,
-                        "underline_offset": -20,
-                        "highlight_text_color": "#000000",
-                        "highlight_underline_color": "#000000",
-                        "spacing_text": false,
-                        "spacing_text_content": "",
-                        "spacing_text_left": 0,
-                        "spacing_text_right": 0,
-                        "stroke_text": false,
-                        "stroke_text_content": "",
-                        "width": "100%",
-                        "unit": "percent",
-                        "custom_width": 100,
-                        "custom_width_pixel": 500,
-                        "inherit_text_alignment": true,
-                        "justify_alignment": false,
-                        "alignment": "left",
-                        "width_tablet": "100%",
-                        "unit_tablet": "percent",
-                        "custom_width_tablet": 100,
-                        "custom_width_tablet_pixel": 100,
-                        "inherit_text_alignment_tablet": true,
-                        "justify_alignment_tablet": false,
-                        "alignment_tablet": "left",
-                        "width_mobile": "100%",
-                        "unit_mobile": "percent",
-                        "custom_width_mobile": 100,
-                        "custom_width_mobile_pixel": 100,
-                        "inherit_text_alignment_mobile": true,
-                        "justify_alignment_mobile": false,
-                        "alignment_mobile": "left",
-                        "type_preset": "paragraph",
-                        "font": "var(--font-body--family)",
-                        "font_size": "1.4rem",
-                        "line_height": "normal",
-                        "letter_spacing": "normal",
-                        "case": "none",
-                        "wrap": "pretty",
-                        "color": "var(--color-foreground)",
-                        "background": false,
-                        "background_color": "#00000026",
-                        "enable_border": false,
-                        "enable_border_bottom": false,
-                        "border": "none",
-                        "border_width": 0,
-                        "border_width_type": "100%",
-                        "border_custom_width": 100,
-                        "border_radius": 0,
-                        "text_effect": "none",
-                        "animation_repeat": false,
-                        "padding-block-start": 0,
-                        "padding-block-end": 0,
-                        "padding-inline-start": 0,
-                        "padding-inline-end": 0
-                      },
-                      "blocks": {}
-                    }
-                  },
-                  "block_order": ["faq_3_text"]
-                }
-              },
-              "block_order": ["faq_3_row"]
-            },
-            "faq_4": {
-              "type": "_accordion-filter",
-              "settings": {
-                "heading_filter": "<h5>¿Como funciona el grupo de Telegram?</h5>",
-                "highlight_text": false,
-                "highlight_text_content": "",
-                "highlight_text_type": "text",
-                "highlight_text_color": "#000000",
-                "highlight_underline_color": "#000000",
-                "spacing_text": false,
-                "spacing_text_content": "",
-                "spacing_text_left": 0,
-                "spacing_text_right": 0,
-                "stroke_text": false,
-                "stroke_text_content": "",
-                "type_preset": "rte",
-                "font": "var(--font-body--family)",
-                "font_size": "1.6rem",
-                "line_height": "normal",
-                "letter_spacing": "normal",
-                "case": "none"
-              },
-              "blocks": {
-                "faq_4_row": {
-                  "type": "_accordion-row",
-                  "settings": {
-                    "heading": "¿Como funciona el grupo de Telegram?",
-                    "open_by_default": false,
-                    "inherit_color_scheme": true,
-                    "scheme_background": "#070E23",
-                    "scheme_background_gradient": "",
-                    "scheme_foreground_heading": "#ffffff",
-                    "scheme_foreground": "#ffffff",
-                    "scheme_primary": "#E30517",
-                    "scheme_primary_hover": "#E30517",
-                    "scheme_border": "#e6e6e6",
-                    "scheme_shadow": "#000000",
-                    "margin-block-start-row": 0,
-                    "margin-block-start-mobile-row": 0,
-                    "margin-block-end-row": 0,
-                    "margin-block-end-mobile-row": 0,
-                    "margin-inline-start-row": 0,
-                    "margin-inline-start-mobile-row": 0,
-                    "margin-inline-end-row": 0,
-                    "margin-inline-end-mobile-row": 0,
-                    "padding-block-start": 16,
-                    "padding-block-end": 16,
-                    "padding-inline-start": 20,
-                    "padding-inline-end": 20
-                  },
-                  "blocks": {
-                    "faq_4_text": {
-                      "type": "text",
-                      "name": "t:names.text",
-                      "settings": {
-                        "text": "<p>Al comprar tu plan, recibiras un enlace para unirte al grupo exclusivo de Telegram. Ahi encontraras a los entrenadores disponibles para resolver dudas, motivacion diaria, tips de entrenamiento y una comunidad de personas con los mismos objetivos.</p>",
-                        "typing_text": false,
-                        "primary_text": "",
-                        "secondary_text": "",
-                        "third_text": "",
-                        "highlight_text": false,
-                        "highlight_text_content": "",
-                        "highlight_text_type": "text",
-                        "underline_height": 18,
-                        "underline_offset": -20,
-                        "highlight_text_color": "#000000",
-                        "highlight_underline_color": "#000000",
-                        "spacing_text": false,
-                        "spacing_text_content": "",
-                        "spacing_text_left": 0,
-                        "spacing_text_right": 0,
-                        "stroke_text": false,
-                        "stroke_text_content": "",
-                        "width": "100%",
-                        "unit": "percent",
-                        "custom_width": 100,
-                        "custom_width_pixel": 500,
-                        "inherit_text_alignment": true,
-                        "justify_alignment": false,
-                        "alignment": "left",
-                        "width_tablet": "100%",
-                        "unit_tablet": "percent",
-                        "custom_width_tablet": 100,
-                        "custom_width_tablet_pixel": 100,
-                        "inherit_text_alignment_tablet": true,
-                        "justify_alignment_tablet": false,
-                        "alignment_tablet": "left",
-                        "width_mobile": "100%",
-                        "unit_mobile": "percent",
-                        "custom_width_mobile": 100,
-                        "custom_width_mobile_pixel": 100,
-                        "inherit_text_alignment_mobile": true,
-                        "justify_alignment_mobile": false,
-                        "alignment_mobile": "left",
-                        "type_preset": "paragraph",
-                        "font": "var(--font-body--family)",
-                        "font_size": "1.4rem",
-                        "line_height": "normal",
-                        "letter_spacing": "normal",
-                        "case": "none",
-                        "wrap": "pretty",
-                        "color": "var(--color-foreground)",
-                        "background": false,
-                        "background_color": "#00000026",
-                        "enable_border": false,
-                        "enable_border_bottom": false,
-                        "border": "none",
-                        "border_width": 0,
-                        "border_width_type": "100%",
-                        "border_custom_width": 100,
-                        "border_radius": 0,
-                        "text_effect": "none",
-                        "animation_repeat": false,
-                        "padding-block-start": 0,
-                        "padding-block-end": 0,
-                        "padding-inline-start": 0,
-                        "padding-inline-end": 0
-                      },
-                      "blocks": {}
-                    }
-                  },
-                  "block_order": ["faq_4_text"]
-                }
-              },
-              "block_order": ["faq_4_row"]
-            },
-            "faq_5": {
-              "type": "_accordion-filter",
-              "settings": {
-                "heading_filter": "<h5>¿Puedo hacer el plan si no vivo en la ciudad?</h5>",
-                "highlight_text": false,
-                "highlight_text_content": "",
-                "highlight_text_type": "text",
-                "highlight_text_color": "#000000",
-                "highlight_underline_color": "#000000",
-                "spacing_text": false,
-                "spacing_text_content": "",
-                "spacing_text_left": 0,
-                "spacing_text_right": 0,
-                "stroke_text": false,
-                "stroke_text_content": "",
-                "type_preset": "rte",
-                "font": "var(--font-body--family)",
-                "font_size": "1.6rem",
-                "line_height": "normal",
-                "letter_spacing": "normal",
-                "case": "none"
-              },
-              "blocks": {
-                "faq_5_row": {
-                  "type": "_accordion-row",
-                  "settings": {
-                    "heading": "¿Puedo hacer el plan si no vivo en la ciudad?",
-                    "open_by_default": false,
-                    "inherit_color_scheme": true,
-                    "scheme_background": "#070E23",
-                    "scheme_background_gradient": "",
-                    "scheme_foreground_heading": "#ffffff",
-                    "scheme_foreground": "#ffffff",
-                    "scheme_primary": "#E30517",
-                    "scheme_primary_hover": "#E30517",
-                    "scheme_border": "#e6e6e6",
-                    "scheme_shadow": "#000000",
-                    "margin-block-start-row": 0,
-                    "margin-block-start-mobile-row": 0,
-                    "margin-block-end-row": 0,
-                    "margin-block-end-mobile-row": 0,
-                    "margin-inline-start-row": 0,
-                    "margin-inline-start-mobile-row": 0,
-                    "margin-inline-end-row": 0,
-                    "margin-inline-end-mobile-row": 0,
-                    "padding-block-start": 16,
-                    "padding-block-end": 16,
-                    "padding-inline-start": 20,
-                    "padding-inline-end": 20
-                  },
-                  "blocks": {
-                    "faq_5_text": {
-                      "type": "text",
-                      "name": "t:names.text",
-                      "settings": {
-                        "text": "<p>Si, el plan de entrenamiento y la guia alimentaria funcionan desde cualquier lugar. Solo las 4 clases de boxeo presenciales requieren asistir a nuestra sede. Si estas fuera de la ciudad, esas clases se reemplazan por sesiones virtuales en vivo.</p>",
-                        "typing_text": false,
-                        "primary_text": "",
-                        "secondary_text": "",
-                        "third_text": "",
-                        "highlight_text": false,
-                        "highlight_text_content": "",
-                        "highlight_text_type": "text",
-                        "underline_height": 18,
-                        "underline_offset": -20,
-                        "highlight_text_color": "#000000",
-                        "highlight_underline_color": "#000000",
-                        "spacing_text": false,
-                        "spacing_text_content": "",
-                        "spacing_text_left": 0,
-                        "spacing_text_right": 0,
-                        "stroke_text": false,
-                        "stroke_text_content": "",
-                        "width": "100%",
-                        "unit": "percent",
-                        "custom_width": 100,
-                        "custom_width_pixel": 500,
-                        "inherit_text_alignment": true,
-                        "justify_alignment": false,
-                        "alignment": "left",
-                        "width_tablet": "100%",
-                        "unit_tablet": "percent",
-                        "custom_width_tablet": 100,
-                        "custom_width_tablet_pixel": 100,
-                        "inherit_text_alignment_tablet": true,
-                        "justify_alignment_tablet": false,
-                        "alignment_tablet": "left",
-                        "width_mobile": "100%",
-                        "unit_mobile": "percent",
-                        "custom_width_mobile": 100,
-                        "custom_width_mobile_pixel": 100,
-                        "inherit_text_alignment_mobile": true,
-                        "justify_alignment_mobile": false,
-                        "alignment_mobile": "left",
-                        "type_preset": "paragraph",
-                        "font": "var(--font-body--family)",
-                        "font_size": "1.4rem",
-                        "line_height": "normal",
-                        "letter_spacing": "normal",
-                        "case": "none",
-                        "wrap": "pretty",
-                        "color": "var(--color-foreground)",
-                        "background": false,
-                        "background_color": "#00000026",
-                        "enable_border": false,
-                        "enable_border_bottom": false,
-                        "border": "none",
-                        "border_width": 0,
-                        "border_width_type": "100%",
-                        "border_custom_width": 100,
-                        "border_radius": 0,
-                        "text_effect": "none",
-                        "animation_repeat": false,
-                        "padding-block-start": 0,
-                        "padding-block-end": 0,
-                        "padding-inline-start": 0,
-                        "padding-inline-end": 0
-                      },
-                      "blocks": {}
-                    }
-                  },
-                  "block_order": ["faq_5_text"]
-                }
-              },
-              "block_order": ["faq_5_row"]
-            },
-            "faq_6": {
-              "type": "_accordion-filter",
-              "settings": {
-                "heading_filter": "<h5>¿Cual es la diferencia entre el precio de preventa y el normal?</h5>",
-                "highlight_text": false,
-                "highlight_text_content": "",
-                "highlight_text_type": "text",
-                "highlight_text_color": "#000000",
-                "highlight_underline_color": "#000000",
-                "spacing_text": false,
-                "spacing_text_content": "",
-                "spacing_text_left": 0,
-                "spacing_text_right": 0,
-                "stroke_text": false,
-                "stroke_text_content": "",
-                "type_preset": "rte",
-                "font": "var(--font-body--family)",
-                "font_size": "1.6rem",
-                "line_height": "normal",
-                "letter_spacing": "normal",
-                "case": "none"
-              },
-              "blocks": {
-                "faq_6_row": {
-                  "type": "_accordion-row",
-                  "settings": {
-                    "heading": "¿Cual es la diferencia entre el precio de preventa y el normal?",
-                    "open_by_default": false,
-                    "inherit_color_scheme": true,
-                    "scheme_background": "#070E23",
-                    "scheme_background_gradient": "",
-                    "scheme_foreground_heading": "#ffffff",
-                    "scheme_foreground": "#ffffff",
-                    "scheme_primary": "#E30517",
-                    "scheme_primary_hover": "#E30517",
-                    "scheme_border": "#e6e6e6",
-                    "scheme_shadow": "#000000",
-                    "margin-block-start-row": 0,
-                    "margin-block-start-mobile-row": 0,
-                    "margin-block-end-row": 0,
-                    "margin-block-end-mobile-row": 0,
-                    "margin-inline-start-row": 0,
-                    "margin-inline-start-mobile-row": 0,
-                    "margin-inline-end-row": 0,
-                    "margin-inline-end-mobile-row": 0,
-                    "padding-block-start": 16,
-                    "padding-block-end": 16,
-                    "padding-inline-start": 20,
-                    "padding-inline-end": 20
-                  },
-                  "blocks": {
-                    "faq_6_text": {
-                      "type": "text",
-                      "name": "t:names.text",
-                      "settings": {
-                        "text": "<p>El precio de preventa es de $100.000 COP y esta disponible por tiempo limitado. Una vez se cierre la preventa, el plan tendra un valor de $120.000 COP. Ambos precios incluyen exactamente los mismos beneficios. La diferencia es solo para quienes se decidan rapido.</p>",
-                        "typing_text": false,
-                        "primary_text": "",
-                        "secondary_text": "",
-                        "third_text": "",
-                        "highlight_text": false,
-                        "highlight_text_content": "",
-                        "highlight_text_type": "text",
-                        "underline_height": 18,
-                        "underline_offset": -20,
-                        "highlight_text_color": "#000000",
-                        "highlight_underline_color": "#000000",
-                        "spacing_text": false,
-                        "spacing_text_content": "",
-                        "spacing_text_left": 0,
-                        "spacing_text_right": 0,
-                        "stroke_text": false,
-                        "stroke_text_content": "",
-                        "width": "100%",
-                        "unit": "percent",
-                        "custom_width": 100,
-                        "custom_width_pixel": 500,
-                        "inherit_text_alignment": true,
-                        "justify_alignment": false,
-                        "alignment": "left",
-                        "width_tablet": "100%",
-                        "unit_tablet": "percent",
-                        "custom_width_tablet": 100,
-                        "custom_width_tablet_pixel": 100,
-                        "inherit_text_alignment_tablet": true,
-                        "justify_alignment_tablet": false,
-                        "alignment_tablet": "left",
-                        "width_mobile": "100%",
-                        "unit_mobile": "percent",
-                        "custom_width_mobile": 100,
-                        "custom_width_mobile_pixel": 100,
-                        "inherit_text_alignment_mobile": true,
-                        "justify_alignment_mobile": false,
-                        "alignment_mobile": "left",
-                        "type_preset": "paragraph",
-                        "font": "var(--font-body--family)",
-                        "font_size": "1.4rem",
-                        "line_height": "normal",
-                        "letter_spacing": "normal",
-                        "case": "none",
-                        "wrap": "pretty",
-                        "color": "var(--color-foreground)",
-                        "background": false,
-                        "background_color": "#00000026",
-                        "enable_border": false,
-                        "enable_border_bottom": false,
-                        "border": "none",
-                        "border_width": 0,
-                        "border_width_type": "100%",
-                        "border_custom_width": 100,
-                        "border_radius": 0,
-                        "text_effect": "none",
-                        "animation_repeat": false,
-                        "padding-block-start": 0,
-                        "padding-block-end": 0,
-                        "padding-inline-start": 0,
-                        "padding-inline-end": 0
-                      },
-                      "blocks": {}
-                    }
-                  },
-                  "block_order": ["faq_6_text"]
-                }
-              },
-              "block_order": ["faq_6_row"]
-            }
-          },
-          "block_order": [
-            "faq_1",
-            "faq_2",
-            "faq_3",
-            "faq_4",
-            "faq_5",
-            "faq_6"
-          ]
-        }
-      },
-      "block_order": [
-        "faqs_list_main"
-      ],
-      "name": "Preguntas Frecuentes",
-      "settings": {
-        "faqs_filter_title": "Preguntas Frecuentes",
-        "faqs_filter": false,
-        "content_direction": "column",
-        "content_direction_mobile": "column",
-        "horizontal_alignment": "flex-start",
-        "vertical_alignment": "center",
-        "align_baseline": false,
-        "horizontal_alignment_flex_direction_column": "center",
-        "vertical_alignment_flex_direction_column": "center",
-        "gap": 12,
-        "section_width": "page-width",
-        "page_width_custom": 1570,
-        "section_height": "",
-        "section_height_custom": 50,
-        "color_scheme": "scheme-1",
-        "background_media": "none",
-        "video_position": "cover",
-        "background_image_position": "cover",
-        "border": "none",
-        "border_width": 1,
-        "border_radius": 0,
-        "toggle_overlay": false,
-        "overlay_color": "#00000026",
-        "overlay_style": "solid",
-        "gradient_direction": "to top",
-        "padding-block-start": 60,
-        "padding-block-end": 60
       }
     },
     "final_cta_section": {
