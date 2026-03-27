@@ -1,144 +1,155 @@
 <style>
-/* ═══ PRICING + FAQS COMBINED ═══ */
-.pf-section{background:#070E23;padding:80px 0;color:#fff;overflow:hidden}
-.pf-inner{max-width:1100px;margin:0 auto;padding:0 20px}
+.zdc-pf{--red:#E30517;--dark:#070E23;--dark2:#0c1632;--glass:rgba(255,255,255,.03);position:relative;background:var(--dark);padding:100px 0 80px;overflow:hidden;color:#fff}
+.zdc-pf::before{content:'';position:absolute;top:-200px;left:50%;width:600px;height:600px;background:radial-gradient(circle,rgba(227,5,23,.08),transparent 60%);transform:translateX(-50%);pointer-events:none}
+.zdc-pf-inner{max-width:1100px;margin:0 auto;padding:0 24px;position:relative;z-index:2}
 
-/* Pricing */
-.pf-pricing-header{text-align:center;margin-bottom:48px}
-.pf-pricing-header h2{font-size:clamp(2.2rem,5vw,3.2rem);text-transform:uppercase;letter-spacing:2px;margin-bottom:8px}
-.pf-pricing-header p{font-size:1.05rem;color:#888}
-.pf-pricing-header .pf-line{width:60px;height:3px;background:#E30517;margin:16px auto 0;border-radius:2px}
-.pf-cards{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-bottom:80px}
-.pf-card{border-radius:20px;padding:44px 36px;position:relative;overflow:hidden;transition:transform .4s cubic-bezier(.22,1,.36,1),box-shadow .4s}
-.pf-card:hover{transform:translateY(-6px)}
-.pf-card--primary{background:linear-gradient(135deg,#0f1a3a,#111827);border:2px solid #E30517;box-shadow:0 0 60px rgba(227,5,23,.1)}
-.pf-card--primary:hover{box-shadow:0 20px 60px rgba(227,5,23,.2)}
-.pf-card--secondary{background:linear-gradient(135deg,#111827,#0f1a3a);border:2px solid #1a2332}
-.pf-card--secondary:hover{box-shadow:0 20px 60px rgba(0,0,0,.3)}
-.pf-badge{display:inline-block;background:#E30517;color:#fff;padding:6px 20px;border-radius:100px;font-size:.75rem;text-transform:uppercase;font-weight:700;letter-spacing:1.5px;margin-bottom:20px}
-.pf-badge--outline{background:transparent;border:1px solid #333;color:#888}
-.pf-plan-name{font-size:.85rem;text-transform:uppercase;letter-spacing:3px;color:#666;margin-bottom:16px}
-.pf-price{font-size:3.2rem;font-weight:900;color:#fff;line-height:1;margin-bottom:4px}
-.pf-price span{font-size:1.2rem;font-weight:400;color:#666}
-.pf-price-old{font-size:1rem;color:#555;text-decoration:line-through;margin-bottom:24px;display:block}
-.pf-price-note{font-size:.85rem;color:#E30517;margin-bottom:24px;display:block;font-weight:600}
-.pf-features{list-style:none;padding:0;margin:0 0 32px}
-.pf-features li{padding:10px 0;border-bottom:1px solid rgba(255,255,255,.06);color:#bbb;font-size:.95rem;display:flex;align-items:center;gap:10px}
-.pf-features li:last-child{border-bottom:none}
-.pf-features li svg{width:18px;height:18px;flex-shrink:0}
-.pf-features li svg.check{stroke:#E30517}
-.pf-features li svg.x{stroke:#333}
-.pf-features li.disabled{color:#444}
-.pf-cta{display:block;text-align:center;padding:16px;border-radius:100px;font-size:1rem;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;text-decoration:none;transition:all .3s}
-.pf-cta--red{background:#E30517;color:#fff}
-.pf-cta--red:hover{background:#ff1a2e;box-shadow:0 8px 30px rgba(227,5,23,.4);transform:translateY(-2px)}
-.pf-cta--outline{background:transparent;color:#fff;border:2px solid #333}
-.pf-cta--outline:hover{border-color:#E30517;color:#E30517}
-/* Glow effect on primary card */
-.pf-card--primary::before{content:'';position:absolute;top:-50%;right:-50%;width:200%;height:200%;background:radial-gradient(circle,rgba(227,5,23,.06),transparent 50%);pointer-events:none}
+/* ═══ PRICING ═══ */
+.zdc-pr-head{text-align:center;margin-bottom:56px}
+.zdc-pr-head h2{font-size:clamp(2rem,5vw,3.2rem);font-weight:900;text-transform:uppercase;letter-spacing:3px;margin:0 0 8px}
+.zdc-pr-head p{font-size:1rem;color:#556;margin:0}
+.zdc-pr-head .pr-bar{width:80px;height:3px;background:var(--red);margin:20px auto 0}
+.zdc-pr-cards{display:grid;grid-template-columns:1fr 1.08fr;gap:24px;align-items:start;margin-bottom:0}
+/* Shared card */
+.zdc-pr-card{border-radius:20px;padding:40px 32px;position:relative;overflow:hidden;transition:all .45s cubic-bezier(.22,1,.36,1)}
+/* Secondary */
+.zdc-pr-card--base{background:var(--glass);border:1px solid rgba(255,255,255,.06)}
+.zdc-pr-card--base:hover{border-color:rgba(255,255,255,.12);transform:translateY(-4px)}
+/* Primary */
+.zdc-pr-card--pro{background:linear-gradient(170deg,rgba(227,5,23,.08) 0%,var(--dark2) 40%,var(--dark) 100%);border:2px solid var(--red);box-shadow:0 0 80px rgba(227,5,23,.08),inset 0 1px 0 rgba(255,255,255,.05)}
+.zdc-pr-card--pro:hover{box-shadow:0 0 100px rgba(227,5,23,.15),0 20px 60px rgba(0,0,0,.3);transform:translateY(-6px)}
+/* Corner cut decoration */
+.zdc-pr-card--pro::before{content:'';position:absolute;top:0;right:0;width:120px;height:120px;background:linear-gradient(225deg,rgba(227,5,23,.12),transparent 60%);pointer-events:none}
+.zdc-pr-card--pro::after{content:'';position:absolute;bottom:0;left:0;width:100%;height:1px;background:linear-gradient(90deg,var(--red),transparent);opacity:.3}
+/* Badge */
+.pr-badge{display:inline-block;padding:6px 18px;border-radius:100px;font-size:.7rem;font-weight:800;text-transform:uppercase;letter-spacing:2px;margin-bottom:20px}
+.pr-badge--hot{background:var(--red);color:#fff;animation:zdc-pulse-badge 2s ease-in-out infinite}
+.pr-badge--basic{background:rgba(255,255,255,.06);color:#667;border:1px solid rgba(255,255,255,.08)}
+@keyframes zdc-pulse-badge{0%,100%{box-shadow:0 0 0 0 rgba(227,5,23,.4)}50%{box-shadow:0 0 0 8px rgba(227,5,23,0)}}
+.pr-plan-name{font-size:.8rem;text-transform:uppercase;letter-spacing:3px;color:#445;margin-bottom:16px}
+.pr-price{font-size:clamp(2.8rem,6vw,4rem);font-weight:900;line-height:1;margin-bottom:4px;background:linear-gradient(135deg,#fff 30%,#999);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.zdc-pr-card--base .pr-price{background:linear-gradient(135deg,#aaa,#556);-webkit-background-clip:text;background-clip:text}
+.pr-price span{font-size:1rem;font-weight:400;-webkit-text-fill-color:#556}
+.pr-price-note{display:block;font-size:.82rem;color:var(--red);font-weight:700;margin-bottom:24px;letter-spacing:.5px}
+.zdc-pr-card--base .pr-price-note{color:#556}
+/* Features */
+.pr-feats{list-style:none;padding:0;margin:0 0 32px}
+.pr-feats li{padding:9px 0;border-bottom:1px solid rgba(255,255,255,.04);font-size:.9rem;color:#aab;display:flex;align-items:center;gap:10px}
+.pr-feats li:last-child{border-bottom:none}
+.pr-feats li svg{width:16px;height:16px;flex-shrink:0;stroke-width:2.5;fill:none;stroke-linecap:round;stroke-linejoin:round}
+.pr-feats .ck{stroke:var(--red)}
+.pr-feats .xk{stroke:#333}
+.pr-feats li.off{color:#334}
+/* CTA */
+.pr-cta{display:block;text-align:center;padding:15px;border-radius:12px;font-size:.9rem;font-weight:800;text-transform:uppercase;letter-spacing:2px;text-decoration:none;transition:all .35s;position:relative;overflow:hidden}
+.pr-cta--red{background:var(--red);color:#fff;border:none}
+.pr-cta--red::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(255,255,255,.15),transparent);opacity:0;transition:opacity .3s}
+.pr-cta--red:hover{box-shadow:0 8px 40px rgba(227,5,23,.4);transform:translateY(-2px)}
+.pr-cta--red:hover::before{opacity:1}
+.pr-cta--ghost{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.12)}
+.pr-cta--ghost:hover{border-color:var(--red);color:var(--red)}
 
-/* Divider */
-.pf-divider{display:flex;align-items:center;gap:16px;margin-bottom:56px}
-.pf-divider::before,.pf-divider::after{content:'';flex:1;height:1px;background:linear-gradient(90deg,transparent,#1a2332,transparent)}
-.pf-divider span{font-size:.75rem;text-transform:uppercase;letter-spacing:3px;color:#444;white-space:nowrap}
+/* ═══ DIVIDER ═══ */
+.zdc-div{position:relative;padding:80px 0 60px;text-align:center}
+.zdc-div::before{content:'PREGUNTAS FRECUENTES';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-size:clamp(2rem,8vw,6rem);font-weight:900;text-transform:uppercase;color:rgba(255,255,255,.015);letter-spacing:.15em;white-space:nowrap;pointer-events:none}
+.zdc-div-line{width:100%;height:1px;background:linear-gradient(90deg,transparent,rgba(227,5,23,.3),transparent);position:relative}
+.zdc-div-line::before{content:'';position:absolute;top:50%;left:50%;width:12px;height:12px;background:var(--dark);border:2px solid var(--red);transform:translate(-50%,-50%) rotate(45deg)}
 
-/* FAQs */
-.pf-faqs-header{text-align:center;margin-bottom:40px}
-.pf-faqs-header h2{font-size:clamp(1.8rem,4vw,2.6rem);text-transform:uppercase;letter-spacing:2px;margin-bottom:8px}
-.pf-faqs-header p{color:#888;font-size:1rem}
-.pf-faq-list{max-width:800px;margin:0 auto}
-.pf-faq{border:1px solid #1a2332;border-radius:12px;margin-bottom:10px;overflow:hidden;transition:border-color .3s}
-.pf-faq.open{border-color:#E30517}
-.pf-faq-q{display:flex;align-items:center;justify-content:space-between;padding:20px 24px;cursor:pointer;gap:16px;transition:background .3s}
-.pf-faq-q:hover{background:rgba(255,255,255,.02)}
-.pf-faq-q h3{font-size:1rem;font-weight:600;color:#fff;margin:0;flex:1}
-.pf-faq-icon{width:28px;height:28px;border-radius:50%;background:#111827;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:all .3s}
-.pf-faq.open .pf-faq-icon{background:#E30517;transform:rotate(45deg)}
-.pf-faq-icon svg{width:14px;height:14px;stroke:#fff;stroke-width:2;fill:none;stroke-linecap:round}
-.pf-faq-a{max-height:0;overflow:hidden;transition:max-height .4s ease}
-.pf-faq.open .pf-faq-a{max-height:300px}
-.pf-faq-a-inner{padding:0 24px 20px;color:#999;font-size:.95rem;line-height:1.7}
-/* Number indicator */
-.pf-faq-num{font-size:.75rem;font-weight:700;color:#E30517;margin-right:12px;font-family:monospace;min-width:20px}
+/* ═══ FAQS ═══ */
+.zdc-fq-head{text-align:center;margin-bottom:40px}
+.zdc-fq-head h2{font-size:clamp(1.6rem,4vw,2.4rem);font-weight:900;text-transform:uppercase;letter-spacing:2px;margin:0 0 6px}
+.zdc-fq-head p{color:#556;font-size:.95rem;margin:0}
+.zdc-fq-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;max-width:900px;margin:0 auto}
+.zdc-fq{background:var(--glass);border:1px solid rgba(255,255,255,.05);border-radius:14px;overflow:hidden;transition:all .35s;cursor:pointer}
+.zdc-fq:hover{border-color:rgba(255,255,255,.1)}
+.zdc-fq.open{border-color:rgba(227,5,23,.3)}
+.zdc-fq.open .zdc-fq-bar{width:3px}
+.zdc-fq-q{display:flex;align-items:flex-start;gap:12px;padding:20px 20px 20px 0;position:relative}
+.zdc-fq-bar{position:absolute;left:0;top:0;width:0;height:100%;background:var(--red);transition:width .35s cubic-bezier(.22,1,.36,1);border-radius:0 2px 2px 0}
+.zdc-fq-num{font-size:.72rem;font-weight:800;color:var(--red);min-width:40px;text-align:center;padding-top:3px;letter-spacing:1px;margin-left:16px}
+.zdc-fq-q h3{font-size:.88rem;font-weight:700;color:#dde;margin:0;flex:1;line-height:1.4}
+.zdc-fq-plus{width:24px;height:24px;min-width:24px;border-radius:6px;background:rgba(255,255,255,.04);display:flex;align-items:center;justify-content:center;transition:all .35s;margin-right:4px;margin-top:1px}
+.zdc-fq.open .zdc-fq-plus{background:var(--red);transform:rotate(45deg)}
+.zdc-fq-plus svg{width:12px;height:12px;stroke:#fff;stroke-width:2;fill:none;stroke-linecap:round}
+.zdc-fq-a{max-height:0;overflow:hidden;transition:max-height .45s cubic-bezier(.22,1,.36,1)}
+.zdc-fq.open .zdc-fq-a{max-height:250px}
+.zdc-fq-a-inner{padding:0 20px 20px 68px;font-size:.88rem;color:#778;line-height:1.7}
+.zdc-fq-a-inner p{margin:0}
 
 @media(max-width:768px){
-.pf-cards{grid-template-columns:1fr}
-.pf-card{padding:32px 24px}
-.pf-price{font-size:2.6rem}
+.zdc-pr-cards{grid-template-columns:1fr;gap:16px}
+.zdc-pr-card{padding:32px 24px}
+.zdc-fq-grid{grid-template-columns:1fr}
+.zdc-fq-a-inner{padding-left:52px}
 }
 </style>
 
-<section class="pf-section">
-  <div class="pf-inner">
+<section class="zdc-pf">
+  <div class="zdc-pf-inner">
     <!-- PRICING -->
-    <div class="pf-pricing-header">
-      <h2>{{ section.settings.pricing_heading }}</h2>
-      <p>{{ section.settings.pricing_subheading }}</p>
-      <div class="pf-line"></div>
+    <div class="zdc-pr-head">
+      <h2>{{ section.settings.pricing_heading | default: 'ELIGE TU PLAN' }}</h2>
+      <p>{{ section.settings.pricing_subheading | default: 'Entrena con peleadores profesionales' }}</p>
+      <div class="pr-bar"></div>
     </div>
-    <div class="pf-cards">
-      <!-- Plan 1 -->
-      <div class="pf-card pf-card--primary">
-        <span class="pf-badge">{{ section.settings.plan1_badge }}</span>
-        <div class="pf-plan-name">{{ section.settings.plan1_name }}</div>
-        <div class="pf-price">${{ section.settings.plan1_price }}<span>/mes</span></div>
-        {% if section.settings.plan1_old_price != blank %}
-        <span class="pf-price-old">${{ section.settings.plan1_old_price }} precio normal</span>
-        {% endif %}
-        {% if section.settings.plan1_note != blank %}
-        <span class="pf-price-note">{{ section.settings.plan1_note }}</span>
-        {% endif %}
-        <ul class="pf-features">
-          {% assign features1 = section.settings.plan1_features | split: '|' %}
-          {% for feature in features1 %}
-          <li><svg class="check" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>{{ feature | strip }}</li>
-          {% endfor %}
-        </ul>
-        <a href="{{ section.settings.plan1_link }}" class="pf-cta pf-cta--red">{{ section.settings.plan1_cta }}</a>
-      </div>
-      <!-- Plan 2 -->
-      <div class="pf-card pf-card--secondary">
-        <span class="pf-badge pf-badge--outline">{{ section.settings.plan2_badge }}</span>
-        <div class="pf-plan-name">{{ section.settings.plan2_name }}</div>
-        <div class="pf-price">${{ section.settings.plan2_price }}<span>/mes</span></div>
-        {% if section.settings.plan2_old_price != blank %}
-        <span class="pf-price-old">${{ section.settings.plan2_old_price }}</span>
-        {% endif %}
+    <div class="zdc-pr-cards">
+      <!-- PLAN BASE -->
+      <div class="zdc-pr-card zdc-pr-card--base">
+        <span class="pr-badge pr-badge--basic">{{ section.settings.plan2_badge | default: 'Básico' }}</span>
+        <div class="pr-plan-name">{{ section.settings.plan2_name | default: 'Plan Base' }}</div>
+        <div class="pr-price">${{ section.settings.plan2_price | default: '120.000' }}<span>/mes</span></div>
         {% if section.settings.plan2_note != blank %}
-        <span class="pf-price-note" style="color:#888">{{ section.settings.plan2_note }}</span>
+        <span class="pr-price-note">{{ section.settings.plan2_note }}</span>
         {% endif %}
-        <ul class="pf-features">
-          {% assign features2 = section.settings.plan2_features | split: '|' %}
-          {% for feature in features2 %}
-          {% assign is_disabled = feature | strip | slice: 0, 1 %}
-          {% if is_disabled == '~' %}
-          <li class="disabled"><svg class="x" viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>{{ feature | strip | remove_first: '~' }}</li>
+        <ul class="pr-feats">
+          {% assign f2 = section.settings.plan2_features | split: '|' %}
+          {% for f in f2 %}
+          {% assign ch = f | strip | slice: 0, 1 %}
+          {% if ch == '~' %}
+          <li class="off"><svg class="xk" viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>{{ f | strip | remove_first: '~' }}</li>
           {% else %}
-          <li><svg class="check" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>{{ feature | strip }}</li>
+          <li><svg class="ck" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>{{ f | strip }}</li>
           {% endif %}
           {% endfor %}
         </ul>
-        <a href="{{ section.settings.plan2_link }}" class="pf-cta pf-cta--outline">{{ section.settings.plan2_cta }}</a>
+        <a href="{{ section.settings.plan2_link }}" class="pr-cta pr-cta--ghost">{{ section.settings.plan2_cta | default: 'EMPEZAR AHORA' }}</a>
+      </div>
+      <!-- PLAN COMPLETO -->
+      <div class="zdc-pr-card zdc-pr-card--pro">
+        <span class="pr-badge pr-badge--hot">{{ section.settings.plan1_badge | default: 'Más Popular' }}</span>
+        <div class="pr-plan-name">{{ section.settings.plan1_name | default: 'Plan Completo' }}</div>
+        <div class="pr-price">${{ section.settings.plan1_price | default: '150.000' }}<span>/mes</span></div>
+        {% if section.settings.plan1_note != blank %}
+        <span class="pr-price-note">{{ section.settings.plan1_note }}</span>
+        {% endif %}
+        <ul class="pr-feats">
+          {% assign f1 = section.settings.plan1_features | split: '|' %}
+          {% for f in f1 %}
+          <li><svg class="ck" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>{{ f | strip }}</li>
+          {% endfor %}
+        </ul>
+        <a href="{{ section.settings.plan1_link }}" class="pr-cta pr-cta--red">{{ section.settings.plan1_cta | default: 'QUIERO ESTE PLAN' }}</a>
       </div>
     </div>
 
     <!-- DIVIDER -->
-    <div class="pf-divider"><span>Preguntas Frecuentes</span></div>
+    <div class="zdc-div"><div class="zdc-div-line"></div></div>
 
     <!-- FAQS -->
-    <div class="pf-faqs-header">
-      <h2>{{ section.settings.faqs_heading }}</h2>
-      <p>{{ section.settings.faqs_subheading }}</p>
+    <div class="zdc-fq-head">
+      <h2>{{ section.settings.faqs_heading | default: '¿TIENES DUDAS?' }}</h2>
+      <p>{{ section.settings.faqs_subheading | default: 'Resolvemos las preguntas más comunes' }}</p>
     </div>
-    <div class="pf-faq-list">
+    <div class="zdc-fq-grid">
       {% for block in section.blocks %}
-      <div class="pf-faq" {{ block.shopify_attributes }}>
-        <div class="pf-faq-q" onclick="this.parentElement.classList.toggle('open')">
-          <h3><span class="pf-faq-num">0{{ forloop.index }}</span>{{ block.settings.question }}</h3>
-          <div class="pf-faq-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
+      <div class="zdc-fq" {{ block.shopify_attributes }} onclick="this.classList.toggle('open')">
+        <div class="zdc-fq-q">
+          <div class="zdc-fq-bar"></div>
+          <div class="zdc-fq-num">{{ forloop.index | prepend: '00' | slice: -2, 2 }}</div>
+          <h3>{{ block.settings.question }}</h3>
+          <div class="zdc-fq-plus"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
         </div>
-        <div class="pf-faq-a">
-          <div class="pf-faq-a-inner">{{ block.settings.answer }}</div>
+        <div class="zdc-fq-a">
+          <div class="zdc-fq-a-inner">{{ block.settings.answer }}</div>
         </div>
       </div>
       {% endfor %}
@@ -159,7 +170,7 @@
     { "type": "text", "id": "plan1_name", "label": "Nombre del plan", "default": "Plan Completo" },
     { "type": "text", "id": "plan1_price", "label": "Precio", "default": "150.000" },
     { "type": "text", "id": "plan1_old_price", "label": "Precio anterior (tachado)" },
-    { "type": "text", "id": "plan1_note", "label": "Nota del precio" },
+    { "type": "text", "id": "plan1_note", "label": "Nota del precio", "default": "Todo incluido" },
     { "type": "textarea", "id": "plan1_features", "label": "Características (separadas por |)", "default": "Plan de entrenamiento personalizado|Guía de alimentación completa|8 clases presenciales al mes|Grupo de Telegram con coaches|Acceso completo a la app|Seguimiento personalizado" },
     { "type": "text", "id": "plan1_cta", "label": "Texto del botón", "default": "QUIERO ESTE PLAN" },
     { "type": "url", "id": "plan1_link", "label": "Link del botón" },
@@ -168,7 +179,7 @@
     { "type": "text", "id": "plan2_name", "label": "Nombre del plan", "default": "Plan Base" },
     { "type": "text", "id": "plan2_price", "label": "Precio", "default": "120.000" },
     { "type": "text", "id": "plan2_old_price", "label": "Precio anterior" },
-    { "type": "text", "id": "plan2_note", "label": "Nota del precio" },
+    { "type": "text", "id": "plan2_note", "label": "Nota del precio", "default": "Ideal para empezar" },
     { "type": "textarea", "id": "plan2_features", "label": "Características (| para separar, ~ para deshabilitada)", "default": "Plan de entrenamiento personalizado|Guía de alimentación completa|4 clases presenciales al mes|Grupo de Telegram con coaches|Acceso completo a la app|~Seguimiento personalizado" },
     { "type": "text", "id": "plan2_cta", "label": "Texto del botón", "default": "EMPEZAR AHORA" },
     { "type": "url", "id": "plan2_link", "label": "Link del botón" },
@@ -186,13 +197,11 @@
       ]
     }
   ],
-  "presets": [
-    {
-      "name": "Precios + FAQs",
-      "blocks": [
-        { "type": "faq", "settings": { "question": "¿Pregunta de ejemplo?", "answer": "<p>Respuesta de ejemplo.</p>" } }
-      ]
-    }
-  ]
+  "presets": [{
+    "name": "Precios + FAQs",
+    "blocks": [
+      { "type": "faq", "settings": { "question": "¿Qué incluye el Plan ZDC?", "answer": "<p>Incluye rutina personalizada, guía alimentaria, clases presenciales, grupo de Telegram y acceso a la app.</p>" } }
+    ]
+  }]
 }
 {% endschema %}

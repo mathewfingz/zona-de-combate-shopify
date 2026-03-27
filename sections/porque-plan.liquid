@@ -1,0 +1,91 @@
+<style>
+.zdc-why{--red:#E30517;--dark:#070E23;position:relative;background:var(--dark);padding:100px 0;overflow:hidden}
+.zdc-why::before{content:'';position:absolute;top:0;right:0;width:50%;height:100%;background:radial-gradient(ellipse at 80% 30%,rgba(227,5,23,.06),transparent 60%);pointer-events:none}
+.zdc-why-inner{max-width:1200px;margin:0 auto;padding:0 24px;display:grid;grid-template-columns:200px 1fr;gap:40px;align-items:start;position:relative;z-index:2}
+/* Vertical rotated title */
+.zdc-why-vert{position:relative;display:flex;align-items:flex-start;justify-content:center;padding-top:20px}
+.zdc-why-vert h2{writing-mode:vertical-lr;text-orientation:mixed;transform:rotate(180deg);font-size:clamp(3rem,6vw,5rem);font-weight:900;text-transform:uppercase;letter-spacing:8px;color:rgba(255,255,255,.04);margin:0;white-space:nowrap;line-height:1}
+.zdc-why-vert .vert-accent{position:absolute;top:0;left:50%;width:2px;height:100%;background:linear-gradient(to bottom,var(--red),transparent);transform:translateX(-50%)}
+/* Right content */
+.zdc-why-content{}
+.zdc-why-top{margin-bottom:48px}
+.zdc-why-top h3{font-size:clamp(1.8rem,4vw,2.8rem);font-weight:900;text-transform:uppercase;color:#fff;letter-spacing:2px;margin:0 0 8px;line-height:1.1}
+.zdc-why-top h3 span{color:var(--red)}
+.zdc-why-top p{font-size:1rem;color:#556;margin:0}
+.zdc-why-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.zdc-why-card{position:relative;padding:32px 28px;background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.05);border-radius:16px;backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px);transition:all .45s cubic-bezier(.22,1,.36,1);overflow:hidden}
+.zdc-why-card::before{content:'';position:absolute;top:0;left:0;width:3px;height:0;background:var(--red);transition:height .4s cubic-bezier(.22,1,.36,1);border-radius:0 0 2px 0}
+.zdc-why-card:hover::before{height:100%}
+.zdc-why-card:hover{background:rgba(227,5,23,.04);border-color:rgba(227,5,23,.15);transform:translateY(-4px)}
+.zdc-why-card-num{font-size:3.5rem;font-weight:900;color:var(--red);opacity:.12;line-height:1;margin-bottom:4px;transition:all .4s}
+.zdc-why-card:hover .zdc-why-card-num{opacity:.35;text-shadow:0 0 30px rgba(227,5,23,.4)}
+.zdc-why-card h4{font-size:1.1rem;font-weight:800;text-transform:uppercase;color:#fff;letter-spacing:1px;margin:0 0 8px;transition:color .3s}
+.zdc-why-card:hover h4{color:var(--red)}
+.zdc-why-card p{font-size:.9rem;color:#667;line-height:1.6;margin:0}
+/* Ring rope decoration */
+.zdc-why-ropes{position:absolute;bottom:0;left:0;width:100%;height:3px;background:repeating-linear-gradient(90deg,var(--red) 0,var(--red) 60px,transparent 60px,transparent 80px);opacity:.1}
+@media(max-width:968px){
+.zdc-why-inner{grid-template-columns:1fr}
+.zdc-why-vert{display:none}
+.zdc-why-top{text-align:center}
+}
+@media(max-width:600px){
+.zdc-why-grid{grid-template-columns:1fr}
+.zdc-why-card{padding:24px 20px}
+}
+</style>
+
+<section class="zdc-why">
+  <div class="zdc-why-inner">
+    <div class="zdc-why-vert">
+      <div class="vert-accent"></div>
+      <h2>POR QUÉ</h2>
+    </div>
+    <div class="zdc-why-content">
+      <div class="zdc-why-top">
+        <h3>{{ section.settings.title | default: '¿POR QUÉ <span>ESTE PLAN</span>?' }}</h3>
+        <p>{{ section.settings.subtitle | default: 'Lo que nos hace diferentes' }}</p>
+      </div>
+      <div class="zdc-why-grid">
+        {% for block in section.blocks %}
+        <div class="zdc-why-card" {{ block.shopify_attributes }}>
+          <div class="zdc-why-card-num">{{ forloop.index | prepend: '00' | slice: -2, 2 }}</div>
+          <h4>{{ block.settings.title }}</h4>
+          <p>{{ block.settings.description }}</p>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+  <div class="zdc-why-ropes"></div>
+</section>
+
+{% schema %}
+{
+  "name": "Por Qué Este Plan",
+  "tag": "section",
+  "settings": [
+    { "type": "html", "id": "title", "label": "Título (HTML permitido)", "default": "¿POR QUÉ <span>ESTE PLAN</span>?" },
+    { "type": "text", "id": "subtitle", "label": "Subtítulo", "default": "Lo que nos hace diferentes" }
+  ],
+  "blocks": [
+    {
+      "type": "reason",
+      "name": "Razón",
+      "settings": [
+        { "type": "text", "id": "title", "label": "Título", "default": "Razón" },
+        { "type": "textarea", "id": "description", "label": "Descripción" }
+      ]
+    }
+  ],
+  "presets": [{
+    "name": "Por Qué Este Plan",
+    "blocks": [
+      { "type": "reason", "settings": { "title": "No es un PDF genérico", "description": "Tu plan se adapta a tu nivel, objetivos y estilo de vida. Nada de copiar y pegar." } },
+      { "type": "reason", "settings": { "title": "Entrenadores reales", "description": "Detrás de tu plan hay peleadores profesionales de MMA, Boxeo, Muay Thai y BJJ." } },
+      { "type": "reason", "settings": { "title": "Comunidad que te empuja", "description": "No estás solo. El grupo de Telegram te mantiene motivado y rindiendo cuentas." } },
+      { "type": "reason", "settings": { "title": "Resultados comprobados", "description": "Más de 200 personas ya transformaron su cuerpo con el método Zona de Combate." } }
+    ]
+  }]
+}
+{% endschema %}

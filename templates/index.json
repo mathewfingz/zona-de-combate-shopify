@@ -934,22 +934,33 @@
       }
     },
     "features_section": {
-      "type": "custom-liquid",
+      "type": "features-include",
       "settings": {
-        "custom_liquid": "<div style=\"max-width:1200px;margin:0 auto;padding:60px 20px;background:#070E23;color:#fff;text-align:center;\">\n  <h2 style=\"font-size:3rem;text-transform:uppercase;margin-bottom:12px;color:#fff;\">¿QUE INCLUYE TU PLAN?</h2>\n  <p style=\"font-size:1.2rem;color:#ccc;margin-bottom:48px;\">Todo lo que necesitas para transformar tu cuerpo en 60 dias</p>\n  <div style=\"display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:32px;text-align:center;\">\n    <div style=\"padding:24px;border:1px solid #E30517;border-radius:12px;\">\n      <div style=\"font-size:2.5rem;margin-bottom:12px;\">&#127941;</div>\n      <h3 style=\"font-size:1.3rem;text-transform:uppercase;margin-bottom:8px;color:#fff;\">Plan Personalizado</h3>\n      <p style=\"font-size:0.95rem;color:#ccc;\">Rutinas adaptadas a tu nivel y objetivos. Desde principiante hasta avanzado.</p>\n    </div>\n    <div style=\"padding:24px;border:1px solid #E30517;border-radius:12px;\">\n      <div style=\"font-size:2.5rem;margin-bottom:12px;\">&#127822;</div>\n      <h3 style=\"font-size:1.3rem;text-transform:uppercase;margin-bottom:8px;color:#fff;\">Guia de Alimentacion</h3>\n      <p style=\"font-size:0.95rem;color:#ccc;\">Plan nutricional completo con recetas faciles y lista de mercado semanal.</p>\n    </div>\n    <div style=\"padding:24px;border:1px solid #E30517;border-radius:12px;\">\n      <div style=\"font-size:2.5rem;margin-bottom:12px;\">&#128172;</div>\n      <h3 style=\"font-size:1.3rem;text-transform:uppercase;margin-bottom:8px;color:#fff;\">Acompanamiento Diario</h3>\n      <p style=\"font-size:0.95rem;color:#ccc;\">Grupo de Telegram con entrenadores reales que responden tus dudas todos los dias.</p>\n    </div>\n    <div style=\"padding:24px;border:1px solid #E30517;border-radius:12px;\">\n      <div style=\"font-size:2.5rem;margin-bottom:12px;\">&#129354;</div>\n      <h3 style=\"font-size:1.3rem;text-transform:uppercase;margin-bottom:8px;color:#fff;\">4 Clases de Boxeo en Vivo</h3>\n      <p style=\"font-size:0.95rem;color:#ccc;\">Sesiones presenciales en Zona de Combate con entrenadores profesionales.</p>\n    </div>\n    <div style=\"padding:24px;border:1px solid #E30517;border-radius:12px;\">\n      <div style=\"font-size:2.5rem;margin-bottom:12px;\">&#128241;</div>\n      <h3 style=\"font-size:1.3rem;text-transform:uppercase;margin-bottom:8px;color:#fff;\">Acceso a la App</h3>\n      <p style=\"font-size:0.95rem;color:#ccc;\">Todos los entrenamientos y seguimiento de progreso desde tu celular.</p>\n    </div>\n  </div>\n</div>",
-        "color_scheme": "scheme-9",
-        "padding_top": 0,
-        "padding_bottom": 0
-      }
+        "title": "¿QUÉ <span>INCLUYE</span> TU PLAN?",
+        "subtitle": "Todo lo que necesitas para transformar tu cuerpo"
+      },
+      "blocks": {
+        "ft_1": { "type": "feature", "settings": { "title": "Plan Personalizado", "description": "Rutinas adaptadas a tu nivel y objetivos. Desde principiante hasta avanzado." } },
+        "ft_2": { "type": "feature", "settings": { "title": "Guía de Alimentación", "description": "Plan nutricional completo con recetas fáciles y lista de mercado semanal." } },
+        "ft_3": { "type": "feature", "settings": { "title": "Acompañamiento Diario", "description": "Grupo de Telegram con entrenadores reales que responden tus dudas todos los días." } },
+        "ft_4": { "type": "feature", "settings": { "title": "Clases Presenciales", "description": "Sesiones presenciales en Zona de Combate con entrenadores profesionales." } },
+        "ft_5": { "type": "feature", "settings": { "title": "Acceso a la App", "description": "Todos los entrenamientos y seguimiento de progreso desde tu celular." } }
+      },
+      "block_order": ["ft_1", "ft_2", "ft_3", "ft_4", "ft_5"]
     },
     "porque_section": {
-      "type": "custom-liquid",
+      "type": "porque-plan",
       "settings": {
-        "custom_liquid": "<div style=\"max-width:1200px;margin:0 auto;padding:60px 20px;text-align:center;background:#fff;color:#070E23;\">\n  <h2 style=\"font-size:3rem;text-transform:uppercase;margin-bottom:40px;color:#070E23;\">¿POR QUE ESTE PLAN?</h2>\n  <div style=\"display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:32px;text-align:left;\">\n    <div style=\"padding:24px;background:#f5f5f5;border-radius:12px;border-left:4px solid #E30517;\">\n      <h3 style=\"font-size:1.2rem;text-transform:uppercase;margin-bottom:8px;color:#070E23;\">No es un PDF generico</h3>\n      <p style=\"font-size:0.95rem;color:#555;\">Tu plan se adapta a tu nivel, objetivos y estilo de vida. Nada de copiar y pegar.</p>\n    </div>\n    <div style=\"padding:24px;background:#f5f5f5;border-radius:12px;border-left:4px solid #E30517;\">\n      <h3 style=\"font-size:1.2rem;text-transform:uppercase;margin-bottom:8px;color:#070E23;\">Entrenadores reales</h3>\n      <p style=\"font-size:0.95rem;color:#555;\">Detras de tu plan hay peleadores profesionales de MMA, Boxeo, Muay Thai y BJJ.</p>\n    </div>\n    <div style=\"padding:24px;background:#f5f5f5;border-radius:12px;border-left:4px solid #E30517;\">\n      <h3 style=\"font-size:1.2rem;text-transform:uppercase;margin-bottom:8px;color:#070E23;\">Comunidad que te empuja</h3>\n      <p style=\"font-size:0.95rem;color:#555;\">No estas solo. El grupo de Telegram te mantiene motivado y rindiendo cuentas.</p>\n    </div>\n    <div style=\"padding:24px;background:#f5f5f5;border-radius:12px;border-left:4px solid #E30517;\">\n      <h3 style=\"font-size:1.2rem;text-transform:uppercase;margin-bottom:8px;color:#070E23;\">Resultados comprobados</h3>\n      <p style=\"font-size:0.95rem;color:#555;\">Mas de 200 personas ya transformaron su cuerpo con el metodo Zona de Combate.</p>\n    </div>\n  </div>\n</div>",
-        "color_scheme": "scheme-1",
-        "padding_top": 40,
-        "padding_bottom": 40
-      }
+        "title": "¿POR QUÉ <span>ESTE PLAN</span>?",
+        "subtitle": "Lo que nos hace diferentes"
+      },
+      "blocks": {
+        "pq_1": { "type": "reason", "settings": { "title": "No es un PDF genérico", "description": "Tu plan se adapta a tu nivel, objetivos y estilo de vida. Nada de copiar y pegar." } },
+        "pq_2": { "type": "reason", "settings": { "title": "Entrenadores reales", "description": "Detrás de tu plan hay peleadores profesionales de MMA, Boxeo, Muay Thai y BJJ." } },
+        "pq_3": { "type": "reason", "settings": { "title": "Comunidad que te empuja", "description": "No estás solo. El grupo de Telegram te mantiene motivado y rindiendo cuentas." } },
+        "pq_4": { "type": "reason", "settings": { "title": "Resultados comprobados", "description": "Más de 200 personas ya transformaron su cuerpo con el método Zona de Combate." } }
+      },
+      "block_order": ["pq_1", "pq_2", "pq_3", "pq_4"]
     },
     "pricing_section": {
       "type": "pricing-faqs",

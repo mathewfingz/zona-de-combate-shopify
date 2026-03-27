@@ -1,0 +1,99 @@
+<style>
+.zdc-feat{--red:#E30517;--dark:#070E23;--dark2:#0c1632;position:relative;background:var(--dark);padding:100px 0;overflow:hidden}
+.zdc-feat::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(135deg,transparent,transparent 40px,rgba(227,5,23,.015) 40px,rgba(227,5,23,.015) 41px);pointer-events:none}
+.zdc-feat::after{content:'INCLUYE';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-size:clamp(8rem,20vw,18rem);font-weight:900;text-transform:uppercase;color:rgba(255,255,255,.012);letter-spacing:.1em;pointer-events:none;white-space:nowrap}
+.zdc-feat-inner{max-width:1100px;margin:0 auto;padding:0 24px;position:relative;z-index:2}
+.zdc-feat-head{text-align:center;margin-bottom:72px}
+.zdc-feat-head h2{font-size:clamp(2rem,5vw,3.2rem);font-weight:900;text-transform:uppercase;color:#fff;letter-spacing:3px;margin:0 0 12px}
+.zdc-feat-head h2 span{color:var(--red)}
+.zdc-feat-head p{font-size:1.05rem;color:#556;max-width:480px;margin:0 auto}
+.zdc-feat-head .bar{width:80px;height:3px;background:var(--red);margin:20px auto 0;position:relative}
+.zdc-feat-head .bar::after{content:'';position:absolute;left:0;top:0;width:30px;height:100%;background:#fff;animation:zdc-bar-slide 2.5s ease-in-out infinite}
+@keyframes zdc-bar-slide{0%,100%{transform:translateX(0);opacity:0}50%{transform:translateX(50px);opacity:1}}
+.zdc-feat-list{display:flex;flex-direction:column;gap:0}
+.zdc-feat-item{display:grid;grid-template-columns:80px 1fr;gap:0;align-items:stretch;position:relative;border-bottom:1px solid rgba(255,255,255,.04)}
+.zdc-feat-item:last-child{border-bottom:none}
+.zdc-feat-item:nth-child(even) .zdc-feat-body{text-align:right}
+.zdc-feat-item:nth-child(even){direction:rtl}
+.zdc-feat-item:nth-child(even) .zdc-feat-body{direction:ltr}
+.zdc-feat-item:nth-child(even) .zdc-feat-num{direction:ltr}
+.zdc-feat-num{display:flex;align-items:center;justify-content:center;position:relative}
+.zdc-feat-num span{font-size:2.8rem;font-weight:900;color:var(--red);opacity:.25;transition:all .5s cubic-bezier(.22,1,.36,1);line-height:1}
+.zdc-feat-item:hover .zdc-feat-num span{opacity:1;transform:scale(1.1)}
+.zdc-feat-num::after{content:'';position:absolute;right:0;top:20%;height:60%;width:2px;background:var(--red);opacity:.15;transition:opacity .4s}
+.zdc-feat-item:nth-child(even) .zdc-feat-num::after{right:auto;left:0}
+.zdc-feat-item:hover .zdc-feat-num::after{opacity:.6}
+.zdc-feat-body{padding:28px 32px;transition:all .4s}
+.zdc-feat-item:hover .zdc-feat-body{background:rgba(227,5,23,.03)}
+.zdc-feat-body h3{font-size:1.25rem;font-weight:800;text-transform:uppercase;color:#fff;letter-spacing:1.5px;margin:0 0 6px;transition:color .3s}
+.zdc-feat-item:hover .zdc-feat-body h3{color:var(--red)}
+.zdc-feat-body p{font-size:.92rem;color:#667;line-height:1.6;margin:0;max-width:420px}
+.zdc-feat-item:nth-child(even) .zdc-feat-body p{margin-left:auto}
+/* Connector dots */
+.zdc-feat-item::before{content:'';position:absolute;left:79px;top:50%;width:8px;height:8px;border-radius:50%;background:var(--dark);border:2px solid rgba(227,5,23,.3);transform:translate(-50%,-50%);z-index:2;transition:all .3s}
+.zdc-feat-item:nth-child(even)::before{left:auto;right:71px;transform:translate(50%,-50%)}
+.zdc-feat-item:hover::before{border-color:var(--red);box-shadow:0 0 12px rgba(227,5,23,.5);background:var(--red)}
+@media(max-width:768px){
+.zdc-feat-item{grid-template-columns:60px 1fr}
+.zdc-feat-item:nth-child(even){direction:ltr}
+.zdc-feat-item:nth-child(even) .zdc-feat-body{text-align:left}
+.zdc-feat-item:nth-child(even) .zdc-feat-body p{margin-left:0}
+.zdc-feat-item::before{left:59px!important;right:auto!important;transform:translate(-50%,-50%)!important}
+.zdc-feat-item:nth-child(even) .zdc-feat-num::after{left:auto;right:0}
+.zdc-feat-num span{font-size:2rem}
+.zdc-feat-body{padding:20px 20px}
+.zdc-feat-body h3{font-size:1.05rem}
+}
+</style>
+
+<section class="zdc-feat">
+  <div class="zdc-feat-inner">
+    <div class="zdc-feat-head">
+      <h2>{{ section.settings.title | default: '¿QUÉ <span>INCLUYE</span> TU PLAN?' }}</h2>
+      <p>{{ section.settings.subtitle | default: 'Todo lo que necesitas para transformar tu cuerpo' }}</p>
+      <div class="bar"></div>
+    </div>
+    <div class="zdc-feat-list">
+      {% for block in section.blocks %}
+      <div class="zdc-feat-item" {{ block.shopify_attributes }}>
+        <div class="zdc-feat-num"><span>{{ forloop.index | prepend: '00' | slice: -2, 2 }}</span></div>
+        <div class="zdc-feat-body">
+          <h3>{{ block.settings.title }}</h3>
+          <p>{{ block.settings.description }}</p>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Qué Incluye",
+  "tag": "section",
+  "settings": [
+    { "type": "html", "id": "title", "label": "Título (HTML permitido)", "default": "¿QUÉ <span>INCLUYE</span> TU PLAN?" },
+    { "type": "text", "id": "subtitle", "label": "Subtítulo", "default": "Todo lo que necesitas para transformar tu cuerpo" }
+  ],
+  "blocks": [
+    {
+      "type": "feature",
+      "name": "Característica",
+      "settings": [
+        { "type": "text", "id": "title", "label": "Título", "default": "Característica" },
+        { "type": "textarea", "id": "description", "label": "Descripción" }
+      ]
+    }
+  ],
+  "presets": [{
+    "name": "Qué Incluye",
+    "blocks": [
+      { "type": "feature", "settings": { "title": "Plan Personalizado", "description": "Rutinas adaptadas a tu nivel y objetivos. Desde principiante hasta avanzado." } },
+      { "type": "feature", "settings": { "title": "Guía de Alimentación", "description": "Plan nutricional completo con recetas fáciles y lista de mercado semanal." } },
+      { "type": "feature", "settings": { "title": "Acompañamiento Diario", "description": "Grupo de Telegram con entrenadores reales que responden tus dudas todos los días." } },
+      { "type": "feature", "settings": { "title": "Clases Presenciales", "description": "Sesiones presenciales en Zona de Combate con entrenadores profesionales." } },
+      { "type": "feature", "settings": { "title": "Acceso a la App", "description": "Todos los entrenamientos y seguimiento de progreso desde tu celular." } }
+    ]
+  }]
+}
+{% endschema %}
