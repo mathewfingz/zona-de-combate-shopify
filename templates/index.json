@@ -1,12 +1,3 @@
-/*
- * ------------------------------------------------------------
- * IMPORTANT: The contents of this file are auto-generated.
- *
- * This file may be updated by the Shopify admin theme editor
- * or related systems. Please exercise caution as any changes
- * made to this file may be overwritten.
- * ------------------------------------------------------------
- */
 {
   "sections": {
     "slideshow_hero": {
@@ -22,13 +13,15 @@
             "container": "page-width page-width--full",
             "height": "fit",
             "media_type_1": "image",
-            "image_2": "shopify://shop_images/MG_3379.jpg",
+            "image_1": "",
+            "image_mb_1": "",
+            "video_1": "",
             "inherit_color_scheme": false,
-            "scheme_background": "#070e23",
+            "scheme_background": "#000000",
             "scheme_background_gradient": "",
             "scheme_foreground_heading": "#ffffff",
             "scheme_foreground": "#ffffff",
-            "scheme_primary": "#e30517",
+            "scheme_primary": "#E30517",
             "scheme_primary_hover": "#ff2233",
             "scheme_border": "#333333",
             "scheme_shadow": "#000000"
@@ -61,11 +54,11 @@
                 "height": "fill",
                 "custom_height": 100,
                 "inherit_color_scheme": true,
-                "scheme_background": "#070e23",
+                "scheme_background": "#000000",
                 "scheme_background_gradient": "",
                 "scheme_foreground_heading": "#ffffff",
                 "scheme_foreground": "#ffffff",
-                "scheme_primary": "#e30517",
+                "scheme_primary": "#E30517",
                 "scheme_primary_hover": "#ff2233",
                 "scheme_border": "#333333",
                 "scheme_shadow": "#000000",
@@ -135,11 +128,11 @@
                     "height": "fit",
                     "custom_height": 100,
                     "inherit_color_scheme": true,
-                    "scheme_background": "#070e23",
+                    "scheme_background": "#000000",
                     "scheme_background_gradient": "",
                     "scheme_foreground_heading": "#ffffff",
                     "scheme_foreground": "#ffffff",
-                    "scheme_primary": "#e30517",
+                    "scheme_primary": "#E30517",
                     "scheme_primary_hover": "#ff2233",
                     "scheme_border": "#333333",
                     "scheme_shadow": "#000000",
@@ -512,8 +505,7 @@
             "padding-block-end": 0,
             "padding-inline-start": 0,
             "padding-inline-end": 0
-          },
-          "blocks": {}
+          }
         },
         "icon_dot_1": {
           "type": "icon",
@@ -525,8 +517,7 @@
             "open_in_new_tab": false,
             "width": 20,
             "animation_type": "none"
-          },
-          "blocks": {}
+          }
         },
         "text_marquee_2": {
           "type": "text",
@@ -593,8 +584,7 @@
             "padding-block-end": 0,
             "padding-inline-start": 0,
             "padding-inline-end": 0
-          },
-          "blocks": {}
+          }
         },
         "icon_dot_2": {
           "type": "icon",
@@ -606,8 +596,7 @@
             "open_in_new_tab": false,
             "width": 20,
             "animation_type": "none"
-          },
-          "blocks": {}
+          }
         },
         "text_marquee_3": {
           "type": "text",
@@ -674,8 +663,7 @@
             "padding-block-end": 0,
             "padding-inline-start": 0,
             "padding-inline-end": 0
-          },
-          "blocks": {}
+          }
         },
         "icon_dot_3": {
           "type": "icon",
@@ -687,8 +675,7 @@
             "open_in_new_tab": false,
             "width": 20,
             "animation_type": "none"
-          },
-          "blocks": {}
+          }
         },
         "text_marquee_4": {
           "type": "text",
@@ -755,8 +742,7 @@
             "padding-block-end": 0,
             "padding-inline-start": 0,
             "padding-inline-end": 0
-          },
-          "blocks": {}
+          }
         },
         "icon_dot_4": {
           "type": "icon",
@@ -768,8 +754,7 @@
             "open_in_new_tab": false,
             "width": 20,
             "animation_type": "none"
-          },
-          "blocks": {}
+          }
         },
         "text_marquee_5": {
           "type": "text",
@@ -836,8 +821,7 @@
             "padding-block-end": 0,
             "padding-inline-start": 0,
             "padding-inline-end": 0
-          },
-          "blocks": {}
+          }
         },
         "icon_dot_5": {
           "type": "icon",
@@ -849,8 +833,7 @@
             "open_in_new_tab": false,
             "width": 20,
             "animation_type": "none"
-          },
-          "blocks": {}
+          }
         },
         "text_marquee_6": {
           "type": "text",
@@ -917,8 +900,7 @@
             "padding-block-end": 0,
             "padding-inline-start": 0,
             "padding-inline-end": 0
-          },
-          "blocks": {}
+          }
         }
       },
       "block_order": [
@@ -953,6 +935,10 @@
     },
     "features_section": {
       "type": "features-include",
+      "settings": {
+        "title": "¿QUÉ <span>INCLUYE</span> TU PLAN?",
+        "subtitle": "Todo lo que necesitas para transformar tu cuerpo"
+      },
       "blocks": {
         "ft_1": {
           "type": "feature",
@@ -996,14 +982,14 @@
         "ft_3",
         "ft_4",
         "ft_5"
-      ],
-      "settings": {
-        "title": "¿QUÉ <span>INCLUYE</span> TU PLAN?",
-        "subtitle": "Todo lo que necesitas para transformar tu cuerpo"
-      }
+      ]
     },
     "porque_section": {
       "type": "porque-plan",
+      "settings": {
+        "title": "¿POR QUÉ <span>ESTE PLAN</span>?",
+        "subtitle": "Lo que nos hace diferentes"
+      },
       "blocks": {
         "pq_1": {
           "type": "reason",
@@ -1039,14 +1025,30 @@
         "pq_2",
         "pq_3",
         "pq_4"
-      ],
-      "settings": {
-        "title": "¿POR QUÉ <span>ESTE PLAN</span>?",
-        "subtitle": "Lo que nos hace diferentes"
-      }
+      ]
     },
     "pricing_section": {
       "type": "pricing-faqs",
+      "settings": {
+        "pricing_heading": "ELIGE TU PLAN",
+        "pricing_subheading": "Entrena con peleadores profesionales",
+        "plan1_badge": "Más Popular",
+        "plan1_name": "Plan Completo",
+        "plan1_price": "150.000",
+        "plan1_old_price": "",
+        "plan1_note": "Todo incluido",
+        "plan1_features": "Plan de entrenamiento personalizado|Guía de alimentación completa|8 clases presenciales al mes|Grupo de Telegram con coaches|Acceso completo a la app|Seguimiento personalizado",
+        "plan1_cta": "QUIERO ESTE PLAN",
+        "plan2_badge": "Básico",
+        "plan2_name": "Plan Base",
+        "plan2_price": "120.000",
+        "plan2_old_price": "",
+        "plan2_note": "Ideal para empezar",
+        "plan2_features": "Plan de entrenamiento personalizado|Guía de alimentación completa|4 clases presenciales al mes|Grupo de Telegram con coaches|Acceso completo a la app|~Seguimiento personalizado",
+        "plan2_cta": "EMPEZAR AHORA",
+        "faqs_heading": "¿TIENES DUDAS?",
+        "faqs_subheading": "Resolvemos las preguntas más comunes"
+      },
       "blocks": {
         "faq_1": {
           "type": "faq",
@@ -1098,296 +1100,18 @@
         "faq_4",
         "faq_5",
         "faq_6"
-      ],
-      "settings": {
-        "pricing_heading": "ELIGE TU PLAN",
-        "pricing_subheading": "Entrena con peleadores profesionales",
-        "plan1_badge": "Más Popular",
-        "plan1_name": "Plan Completo",
-        "plan1_price": "120.000",
-        "plan1_old_price": "",
-        "plan1_note": "Todo incluido",
-        "plan1_features": "Plan de entrenamiento personalizado|Guía de alimentación completa|8 clases presenciales al mes|Grupo de Telegram con coaches|Acceso completo a la app|Seguimiento personalizado",
-        "plan1_cta": "QUIERO ESTE PLAN",
-        "plan1_link": "",
-        "plan2_badge": "Básico",
-        "plan2_name": "Plan Base",
-        "plan2_price": "100.000",
-        "plan2_old_price": "",
-        "plan2_note": "Ideal para empezar",
-        "plan2_features": "Plan de entrenamiento personalizado|Guía de alimentación completa|4 clases presenciales al mes|Grupo de Telegram con coaches|Acceso completo a la app|~Seguimiento personalizado",
-        "plan2_cta": "EMPEZAR AHORA",
-        "plan2_link": "",
-        "faqs_heading": "¿TIENES DUDAS?",
-        "faqs_subheading": "Resolvemos las preguntas más comunes"
-      }
-    },
-    "section_bPziPC": {
-      "type": "section",
-      "blocks": {
-        "video_pDRw3X": {
-          "type": "video",
-          "name": "t:names.video",
-          "settings": {
-            "source": "uploaded",
-            "video_autoplay": false,
-            "video_loop": true,
-            "alt": "",
-            "custom_width": 100,
-            "custom_width_mobile": 100,
-            "aspect_ratio": "16/9",
-            "border": "none",
-            "border_width": 1,
-            "border_radius": 0,
-            "padding-block-start": 0,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
-          },
-          "blocks": {}
-        },
-        "group_CWtAqz": {
-          "type": "group",
-          "name": "Caption",
-          "settings": {
-            "link": "",
-            "open_in_new_tab": false,
-            "content_direction": "row",
-            "content_direction_mobile": "column",
-            "horizontal_alignment": "space-between",
-            "vertical_alignment": "flex-end",
-            "align_baseline": true,
-            "horizontal_alignment_flex_direction_column": "flex-start",
-            "vertical_alignment_flex_direction_column": "center",
-            "horizontal_alignment_mobile": "flex-start",
-            "vertical_alignment_mobile": "center",
-            "horizontal_alignment_flex_direction_column_mobile": "flex-start",
-            "vertical_alignment_flex_direction_column_mobile": "center",
-            "gap": 12,
-            "width": "fill",
-            "custom_width": 100,
-            "width_tablet": "fill",
-            "custom_width_tablet": 100,
-            "width_mobile": "fill",
-            "custom_width_mobile": 100,
-            "height": "fit",
-            "custom_height": 100,
-            "inherit_color_scheme": true,
-            "scheme_background": "#FFFFFF",
-            "scheme_background_gradient": "",
-            "scheme_foreground_heading": "#000000",
-            "scheme_foreground": "#000000",
-            "scheme_primary": "#000F9F",
-            "scheme_primary_hover": "#000000",
-            "scheme_border": "#E6E6E6",
-            "scheme_shadow": "#000000",
-            "background_media": "none",
-            "video_position": "cover",
-            "background_image_position": "cover",
-            "content_overlay": false,
-            "image_ratio": "adapt",
-            "border": "none",
-            "border_width": 1,
-            "border_opacity": 0,
-            "border_radius": 0,
-            "toggle_overlay": false,
-            "overlay_color": "#00000026",
-            "extend_left_overlay": false,
-            "extend_right_overlay": false,
-            "overlay_style": "solid",
-            "gradient_direction": "to top",
-            "enable_parallax": "none",
-            "disable_parallax_mobile": false,
-            "parallax_speed": 0.5,
-            "horizontal_position": 0,
-            "vertical_position": 0,
-            "shadow_color": "#00000000",
-            "shadow_horizontal_offset": 0,
-            "shadow_vertical_offset": 0,
-            "shadow_blur": 0,
-            "spread_radius": 0,
-            "margin-block-start": 0,
-            "margin-block-start-mobile": 0,
-            "margin-block-end": 0,
-            "margin-block-end-mobile": 0,
-            "margin-inline-start": 0,
-            "margin-inline-start-mobile": 0,
-            "margin-inline-end": 0,
-            "margin-inline-end-mobile": 0,
-            "padding-block-start": 0,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
-          },
-          "blocks": {
-            "text_riLdnB": {
-              "type": "text",
-              "name": "t:names.text",
-              "settings": {
-                "text": "<p>Take a look behind the scenes of our latest product launch.</p>",
-                "typing_text": false,
-                "primary_text": "Welcome to our store!",
-                "secondary_text": "Exclusive offers just for you.",
-                "third_text": "Shop now and enjoy deals!",
-                "highlight_text": false,
-                "highlight_text_content": "",
-                "highlight_text_type": "text",
-                "underline_height": 18,
-                "underline_offset": 20,
-                "highlight_text_color": "#000000",
-                "highlight_underline_color": "#000000",
-                "spacing_text": false,
-                "spacing_text_content": "",
-                "spacing_text_left": 0,
-                "spacing_text_right": 0,
-                "stroke_text": false,
-                "stroke_text_content": "",
-                "width": "fit-content",
-                "unit": "percent",
-                "custom_width": 100,
-                "custom_width_pixel": 500,
-                "inherit_text_alignment": true,
-                "justify_alignment": false,
-                "alignment": "left",
-                "width_tablet": "fit-content",
-                "unit_tablet": "percent",
-                "custom_width_tablet": 100,
-                "custom_width_tablet_pixel": 100,
-                "inherit_text_alignment_tablet": true,
-                "justify_alignment_tablet": false,
-                "alignment_tablet": "left",
-                "width_mobile": "fit-content",
-                "unit_mobile": "percent",
-                "custom_width_mobile": 100,
-                "custom_width_mobile_pixel": 100,
-                "inherit_text_alignment_mobile": true,
-                "justify_alignment_mobile": false,
-                "alignment_mobile": "left",
-                "type_preset": "rte",
-                "font": "var(--font-body--family)",
-                "font_size": "1.6rem",
-                "line_height": "normal",
-                "letter_spacing": "normal",
-                "case": "none",
-                "wrap": "pretty",
-                "color": "var(--color-foreground)",
-                "background": false,
-                "background_color": "#00000026",
-                "enable_border": false,
-                "enable_border_bottom": false,
-                "border": "none",
-                "border_width": 0,
-                "border_width_type": "100%",
-                "border_custom_width": 100,
-                "border_radius": 0,
-                "text_effect": "none",
-                "animation_repeat": false,
-                "padding-block-start": 0,
-                "padding-block-end": 0,
-                "padding-inline-start": 0,
-                "padding-inline-end": 0
-              },
-              "blocks": {}
-            },
-            "button_LRgzcV": {
-              "type": "button",
-              "name": "t:names.button",
-              "settings": {
-                "label": "Discover the collection",
-                "link": "",
-                "open_in_new_tab": false,
-                "style_class": "link",
-                "button_style": "default",
-                "button_border_width": 1,
-                "button_border_radius": 100,
-                "button_type_font": "var(--font-body--family)",
-                "button_type_size": "1.2rem",
-                "button_font_weight": "default",
-                "button_text_case": "default",
-                "buttons_shadow_horizontal_offset": 0,
-                "buttons_shadow_vertical_offset": 0,
-                "buttons_shadow_blur": 0,
-                "button_type_size_link": "1.2rem",
-                "button_font_weight_link": "default",
-                "case": "none",
-                "wrap": "pretty",
-                "font_style": "normal",
-                "link_underline": false,
-                "link_hover_underline": true,
-                "link_reveal": false,
-                "width": "fit-content",
-                "unit": "percent",
-                "custom_width": 100,
-                "custom_width_pixel": 100,
-                "buttons_padding_vertical": 10,
-                "buttons_padding_horizontal": 20,
-                "width_tablet": "fit-content",
-                "unit_tablet": "percent",
-                "custom_width_tablet": 100,
-                "custom_width_tablet_pixel": 100,
-                "width_mobile": "fit-content",
-                "unit_mobile": "percent",
-                "custom_width_mobile": 100,
-                "custom_width_mobile_pixel": 100,
-                "buttons_padding_vertical_mobile": 10,
-                "buttons_padding_horizontal_mobile": 10
-              },
-              "blocks": {}
-            }
-          },
-          "block_order": [
-            "text_riLdnB",
-            "button_LRgzcV"
-          ]
-        }
-      },
-      "block_order": [
-        "video_pDRw3X",
-        "group_CWtAqz"
-      ],
-      "name": "t:names.video_section",
-      "settings": {
-        "content_direction": "column",
-        "content_direction_mobile": "column",
-        "wrap": "no-wrap",
-        "horizontal_alignment": "flex-start",
-        "vertical_alignment": "center",
-        "align_baseline": false,
-        "horizontal_alignment_flex_direction_column": "flex-start",
-        "vertical_alignment_flex_direction_column": "center",
-        "gap": 16,
-        "section_width": "page-width",
-        "page_width_custom": 1570,
-        "section_height": "",
-        "section_height_custom": 50,
-        "section_height_mobile": "",
-        "section_height_mobile_custom": 50,
-        "color_scheme": "",
-        "background_media": "none",
-        "video_position": "cover",
-        "background_image_position": "cover",
-        "border": "none",
-        "border_width": 1,
-        "border_opacity": 100,
-        "border_radius": 0,
-        "toggle_overlay": false,
-        "overlay_color": "#00000026",
-        "overlay_style": "solid",
-        "gradient_direction": "to top",
-        "image_behavior": "none",
-        "padding-block-start": 32,
-        "padding-block-end": 32,
-        "padding-inline-start": 0,
-        "padding-inline-end": 0
-      }
+      ]
     },
     "instructors_section": {
       "type": "instructors",
+      "settings": {
+        "heading": "TUS ENTRENADORES",
+        "subheading": "Peleadores profesionales que te guían paso a paso"
+      },
       "blocks": {
         "instructor_jorge": {
           "type": "instructor",
           "settings": {
-            "image": "shopify://shop_images/DSC00379.jpg",
             "name": "Jorge Loaiza",
             "specialty": "Boxeo · Muay Thai · MMA",
             "bio": "Entrenador de boxeo y Muay Thai con experiencia como peleador profesional en artes marciales mixtas y Muay Thai, reconocido por su disciplina, exigencia y alto nivel técnico. Se enfoca en formar atletas con bases sólidas, perfeccionando cada movimiento con precisión y compromiso.",
@@ -1397,7 +1121,6 @@
         "instructor_ivan": {
           "type": "instructor",
           "settings": {
-            "image": "shopify://shop_images/DSC00363.jpg",
             "name": "Iván Londoño",
             "specialty": "Boxeo · Muay Thai · MMA",
             "bio": "Entrenador de boxeo y Muay Thai, peleador profesional en artes marciales mixtas y boxeo. Enfocado en la técnica y la disciplina, combina exigencia y compromiso para formar atletas sólidos. Crea un ambiente de trabajo positivo que motiva a sus alumnos a mejorar constantemente.",
@@ -1407,7 +1130,6 @@
         "instructor_tomas": {
           "type": "instructor",
           "settings": {
-            "image": "shopify://shop_images/DSC00388.jpg",
             "name": "Tomás Gutiérrez",
             "specialty": "Acondicionamiento · Lucha Olímpica · MMA",
             "bio": "Entrenador de acondicionamiento físico y lucha olímpica, peleador profesional en MMA y ex campeón de lucha olímpica. Alegre y enérgico, crea un ambiente motivador mientras mantiene un enfoque exigente y disciplinado. Dedicado a guiar a cada alumno paso a paso.",
@@ -1417,7 +1139,6 @@
         "instructor_jonathan": {
           "type": "instructor",
           "settings": {
-            "image": "shopify://shop_images/DSC00398.jpg",
             "name": "Jonathan Castrillón",
             "specialty": "Acondicionamiento · Fisicoculturismo",
             "bio": "Entrenador de acondicionamiento físico y fisicoculturista, enfocado y altamente organizado en cada sesión. Se destaca por su puntualidad y constante seguimiento a sus alumnos, corrigiendo detalladamente la técnica para asegurar una ejecución correcta y resultados efectivos.",
@@ -1427,7 +1148,6 @@
         "instructor_salomon": {
           "type": "instructor",
           "settings": {
-            "image": "shopify://shop_images/DSC00392.jpg",
             "name": "Salomón Tabares",
             "specialty": "Boxeo · Muay Thai · MMA",
             "bio": "Entrenador de acondicionamiento físico, boxeo y Muay Thai, peleador profesional de artes marciales mixtas. Enfocado y altamente organizado en cada sesión. Se destaca por su puntualidad y constante seguimiento a sus alumnos, corrigiendo detalladamente la técnica.",
@@ -1441,11 +1161,7 @@
         "instructor_tomas",
         "instructor_jonathan",
         "instructor_salomon"
-      ],
-      "settings": {
-        "heading": "TUS ENTRENADORES",
-        "subheading": "Peleadores profesionales que te guían paso a paso"
-      }
+      ]
     },
     "gallery_section": {
       "type": "media-gallery",
@@ -1474,11 +1190,11 @@
             "height": "fit",
             "custom_height": 100,
             "inherit_color_scheme": true,
-            "scheme_background": "#070e23",
+            "scheme_background": "#000000",
             "scheme_background_gradient": "",
             "scheme_foreground_heading": "#ffffff",
             "scheme_foreground": "#ffffff",
-            "scheme_primary": "#e30517",
+            "scheme_primary": "#E30517",
             "scheme_primary_hover": "#ff2233",
             "scheme_border": "#333333",
             "scheme_shadow": "#000000",
@@ -1523,7 +1239,6 @@
         },
         "static-media-gallery": {
           "type": "_media-gallery",
-          "disabled": true,
           "static": true,
           "settings": {
             "layout_type": "grid",
@@ -1547,7 +1262,7 @@
             "height": "fit",
             "custom_height": 100,
             "inherit_color_scheme": true,
-            "scheme_background": "#070e23",
+            "scheme_background": "#000000",
             "scheme_background_gradient": "",
             "scheme_foreground_heading": "#ffffff",
             "scheme_foreground": "#ffffff",
@@ -1574,9 +1289,10 @@
               "settings": {
                 "background_media": "image",
                 "video_position": "cover",
+                "background_image": "",
                 "background_image_position": "cover",
                 "link": "",
-                "background_color": "#111827",
+                "background_color": "#0a0a0a",
                 "hide_on_mobile": false,
                 "enable_typing_content": false,
                 "image_ratio": "square",
@@ -1624,7 +1340,8 @@
                 "padding_bottom": 0,
                 "padding_left": 0
               },
-              "blocks": {}
+              "blocks": {},
+              "block_order": []
             },
             "gallery_item_2": {
               "type": "_instagram-item",
@@ -1632,9 +1349,10 @@
               "settings": {
                 "background_media": "image",
                 "video_position": "cover",
+                "background_image": "",
                 "background_image_position": "cover",
                 "link": "",
-                "background_color": "#111827",
+                "background_color": "#0a0a0a",
                 "hide_on_mobile": false,
                 "enable_typing_content": false,
                 "image_ratio": "square",
@@ -1682,7 +1400,8 @@
                 "padding_bottom": 0,
                 "padding_left": 0
               },
-              "blocks": {}
+              "blocks": {},
+              "block_order": []
             },
             "gallery_item_3": {
               "type": "_instagram-item",
@@ -1690,9 +1409,10 @@
               "settings": {
                 "background_media": "image",
                 "video_position": "cover",
+                "background_image": "",
                 "background_image_position": "cover",
                 "link": "",
-                "background_color": "#111827",
+                "background_color": "#0a0a0a",
                 "hide_on_mobile": false,
                 "enable_typing_content": false,
                 "image_ratio": "square",
@@ -1740,7 +1460,8 @@
                 "padding_bottom": 0,
                 "padding_left": 0
               },
-              "blocks": {}
+              "blocks": {},
+              "block_order": []
             },
             "gallery_item_4": {
               "type": "_instagram-item",
@@ -1748,9 +1469,10 @@
               "settings": {
                 "background_media": "image",
                 "video_position": "cover",
+                "background_image": "",
                 "background_image_position": "cover",
                 "link": "",
-                "background_color": "#111827",
+                "background_color": "#0a0a0a",
                 "hide_on_mobile": false,
                 "enable_typing_content": false,
                 "image_ratio": "square",
@@ -1798,7 +1520,8 @@
                 "padding_bottom": 0,
                 "padding_left": 0
               },
-              "blocks": {}
+              "blocks": {},
+              "block_order": []
             }
           },
           "block_order": [
@@ -1841,7 +1564,7 @@
     "final_cta_section": {
       "type": "custom-liquid",
       "settings": {
-        "custom_liquid": "<div style=\"background:#070E23;padding:80px 20px;text-align:center;\">\n  <div style=\"max-width:800px;margin:0 auto;\">\n    <h2 style=\"font-size:3.5rem;text-transform:uppercase;color:#fff;margin-bottom:16px;\">NO ESPERES MÁS</h2>\n    <p style=\"font-size:1.3rem;color:#ccc;margin-bottom:12px;\">Tu transformación empieza hoy</p>\n    <p style=\"font-size:1.1rem;color:#888;margin-bottom:8px;\">Planes desde</p>\n    <p style=\"font-size:2.8rem;font-weight:800;color:#E30517;margin-bottom:32px;\">$120.000<span style=\"font-size:1.1rem;color:#888;font-weight:400;\">/mes</span></p>\n    <a href=\"\" style=\"display:inline-block;background:#E30517;color:#fff;text-decoration:none;padding:16px 56px;border-radius:100px;font-size:1.2rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;\">QUIERO MI PLAN</a>\n  </div>\n</div>",
+        "custom_liquid": "<div style=\"background:#000000;padding:80px 20px;text-align:center;\">\n  <div style=\"max-width:800px;margin:0 auto;\">\n    <h2 style=\"font-size:3.5rem;text-transform:uppercase;color:#fff;margin-bottom:16px;\">NO ESPERES MÁS</h2>\n    <p style=\"font-size:1.3rem;color:#ccc;margin-bottom:12px;\">Tu transformación empieza hoy</p>\n    <p style=\"font-size:1.1rem;color:#888;margin-bottom:8px;\">Planes desde</p>\n    <p style=\"font-size:2.8rem;font-weight:800;color:#E30517;margin-bottom:32px;\">$120.000<span style=\"font-size:1.1rem;color:#888;font-weight:400;\">/mes</span></p>\n    <a href=\"\" style=\"display:inline-block;background:#E30517;color:#fff;text-decoration:none;padding:16px 56px;border-radius:100px;font-size:1.2rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;\">QUIERO MI PLAN</a>\n  </div>\n</div>",
         "color_scheme": "scheme-9",
         "padding_top": 0,
         "padding_bottom": 0
@@ -1850,7 +1573,7 @@
     "footer_info_section": {
       "type": "custom-liquid",
       "settings": {
-        "custom_liquid": "<div style=\"background:#0a1128;padding:40px 20px;text-align:center;border-top:1px solid #1a2332;\">\n  <div style=\"max-width:800px;margin:0 auto;color:#ccc;\">\n    <h3 style=\"font-size:1.5rem;text-transform:uppercase;color:#fff;margin-bottom:16px;\">ZONA DE COMBATE</h3>\n    <p style=\"font-size:0.95rem;margin-bottom:8px;\">Horarios: Lunes a Viernes 6:00am - 9:00pm | Sabados 8:00am - 2:00pm</p>\n    <p style=\"font-size:0.95rem;margin-bottom:16px;\">Contacto: info@zonadecombate.co</p>\n    <div style=\"display:flex;justify-content:center;gap:24px;margin-bottom:16px;\">\n      <a href=\"\" style=\"color:#fff;text-decoration:none;font-size:0.9rem;text-transform:uppercase;\">Instagram</a>\n      <a href=\"\" style=\"color:#fff;text-decoration:none;font-size:0.9rem;text-transform:uppercase;\">TikTok</a>\n      <a href=\"\" style=\"color:#fff;text-decoration:none;font-size:0.9rem;text-transform:uppercase;\">Telegram</a>\n      <a href=\"\" style=\"color:#fff;text-decoration:none;font-size:0.9rem;text-transform:uppercase;\">WhatsApp</a>\n    </div>\n    <p style=\"font-size:0.8rem;color:#666;\">© 2026 Zona de Combate. Todos los derechos reservados.</p>\n  </div>\n</div>",
+        "custom_liquid": "<div style=\"background:#000000;padding:40px 20px;text-align:center;border-top:1px solid #1a2332;\">\n  <div style=\"max-width:800px;margin:0 auto;color:#ccc;\">\n    <h3 style=\"font-size:1.5rem;text-transform:uppercase;color:#fff;margin-bottom:16px;\">ZONA DE COMBATE</h3>\n    <p style=\"font-size:0.95rem;margin-bottom:8px;\">Horarios: Lunes a Viernes 6:00am - 9:00pm | Sabados 8:00am - 2:00pm</p>\n    <p style=\"font-size:0.95rem;margin-bottom:16px;\">Contacto: info@zonadecombate.co</p>\n    <div style=\"display:flex;justify-content:center;gap:24px;margin-bottom:16px;\">\n      <a href=\"https://www.instagram.com/zonadecombate_\" target=\"_blank\" style=\"color:#fff;text-decoration:none;font-size:0.9rem;text-transform:uppercase;\"><svg style=\"width:18px;height:18px;vertical-align:middle;margin-right:6px;fill:#fff\" viewBox=\"0 0 24 24\"><path d=\"M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z\"/></svg>Instagram</a>\n      <a href=\"https://www.tiktok.com/@zona.de.combate_\" target=\"_blank\" style=\"color:#fff;text-decoration:none;font-size:0.9rem;text-transform:uppercase;\"><svg style=\"width:18px;height:18px;vertical-align:middle;margin-right:6px;fill:#fff\" viewBox=\"0 0 24 24\"><path d=\"M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z\"/></svg>TikTok</a>\n      <a href=\"\" style=\"color:#fff;text-decoration:none;font-size:0.9rem;text-transform:uppercase;\">Telegram</a>\n      <a href=\"\" style=\"color:#fff;text-decoration:none;font-size:0.9rem;text-transform:uppercase;\">WhatsApp</a>\n    </div>\n    <p style=\"font-size:0.8rem;color:#666;\">© 2026 Zona de Combate. Todos los derechos reservados.</p>\n  </div>\n</div>",
         "color_scheme": "scheme-9",
         "padding_top": 0,
         "padding_bottom": 0
@@ -1863,7 +1586,6 @@
     "features_section",
     "porque_section",
     "pricing_section",
-    "section_bPziPC",
     "instructors_section",
     "gallery_section",
     "final_cta_section",
