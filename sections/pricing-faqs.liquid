@@ -8,7 +8,7 @@
 .zdc-pr-head h2{font-size:clamp(2rem,5vw,3.2rem);font-weight:900;text-transform:uppercase;letter-spacing:3px;margin:0 0 8px}
 .zdc-pr-head p{font-size:1rem;color:#556;margin:0}
 .zdc-pr-head .pr-bar{width:80px;height:3px;background:var(--red);margin:20px auto 0}
-.zdc-pr-cards{display:grid;grid-template-columns:1fr 1.08fr;gap:24px;align-items:start;margin-bottom:0}
+.zdc-pr-cards{display:grid;grid-template-columns:1fr;gap:24px;align-items:start;margin-bottom:0;max-width:520px;margin-left:auto;margin-right:auto}
 /* Shared card */
 .zdc-pr-card{border-radius:20px;padding:40px 32px;position:relative;overflow:hidden;transition:all .45s cubic-bezier(.22,1,.36,1)}
 /* Secondary */
@@ -93,6 +93,7 @@
     </div>
     <div class="zdc-pr-cards">
       <!-- PLAN BASE -->
+      {% if section.settings.plan2_price != blank %}
       <div class="zdc-pr-card zdc-pr-card--base">
         <span class="pr-badge pr-badge--basic">{{ section.settings.plan2_badge | default: 'Básico' }}</span>
         <div class="pr-plan-name">{{ section.settings.plan2_name | default: 'Plan Base' }}</div>
@@ -113,6 +114,7 @@
         </ul>
         <a href="{{ section.settings.plan2_link }}" class="pr-cta pr-cta--ghost">{{ section.settings.plan2_cta | default: 'EMPEZAR AHORA' }}</a>
       </div>
+      {% endif %}
       <!-- PLAN COMPLETO -->
       <div class="zdc-pr-card zdc-pr-card--pro">
         <span class="pr-badge pr-badge--hot">{{ section.settings.plan1_badge | default: 'Más Popular' }}</span>
